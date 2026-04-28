@@ -4,60 +4,47 @@ import { useState } from 'react'
 import Link from 'next/link'
 import ScrollReveal from '@/components/ui/ScrollReveal'
 
-type FilterType = 'All models' | 'Plug-in Hybrid' | 'Diesel' | 'Electric'
-
+type FilterType = 'All models' | 'Plug-in Hybrid'
 const models = [
   {
-    href: '/model/phev',
-    name: 'MG HS PHEV',
-    subtitle: 'True Hybrid Electric',
+    href: '/model/tiggo8phev',
+    name: 'Chery Tiggo 8 PHEV',
+    subtitle: "Pakistan's Only 7-Seater PHEV D-SUV",
     type: 'Plug-in Hybrid' as FilterType,
     typeColor: 'text-[#15DB41]',
     iconSrc: '/assets/plugin-icon.svg',
-    imgSrc: '/assets/phev/phev-updated.webp',
-    price: 'PKR: 9,899,000/-',
+    imgSrc: '/assets/tiggo8phev/tiggo8-index.png',
+    price: 'PKR: 10,999,000/-',
     priceLabel: 'Ex-Factory Price',
     inquire: false,
   },
   {
-    href: '/model/cyberster',
-    name: 'MG Cyberster',
-    subtitle: '100% Electric Roadster',
-    type: 'Electric' as FilterType,
-    typeColor: 'text-[#29C5E8]',
-    iconSrc: '/assets/electric-icon.svg',
-    imgSrc: '/assets/MG_cyberster_Desk_HeroHeader.webp',
+    href: '/model/tiggo9',
+    name: 'Chery Tiggo 9 PHEV',
+    subtitle: 'E-Segment Premium SUV',
+    type: 'Plug-in Hybrid' as FilterType,
+    typeColor: 'text-[#15DB41]',
+    iconSrc: '/assets/plugin-icon.svg',
+    imgSrc: '/assets/tiggo9/tiggo9-index.png',
     price: null,
     priceLabel: null,
     inquire: true,
   },
   {
-    href: '/model/mgu9',
-    name: 'MG U9',
-    subtitle: 'True Luxury Off-Roader',
-    type: 'Diesel' as FilterType,
-    typeColor: 'text-[#28542E]',
-    iconSrc: '/assets/gasolineeu.svg',
-    imgSrc: '/assets/Find-your-dealer-Banner2.webp',
-    price: 'PKR: 22,749,000/-',
-    priceLabel: 'Starting from',
-    inquire: false,
-  },
-  {
-    href: '/model/binguo',
-    name: 'Binguo EV',
-    subtitle: 'Designed to Stand Out',
-    type: 'Electric' as FilterType,
-    typeColor: 'text-[#29C5E8]',
-    iconSrc: '/assets/electric-icon.svg',
-    imgSrc: '/assets/mg-binguo/banner/CtymTX.webp',
+    href: '/model/tiggo7',
+    name: 'Chery Tiggo 7 PHEV',
+    subtitle: 'C-Segment Smart Hybrid',
+    type: 'Plug-in Hybrid' as FilterType,
+    typeColor: 'text-[#15DB41]',
+    iconSrc: '/assets/plugin-icon.svg',
+    imgSrc: '/assets/tiggo7/tiggo7-index.png',
     price: null,
     priceLabel: null,
     inquire: true,
   },
 ]
 
-const filters: FilterType[] = ['Plug-in Hybrid', 'Diesel', 'Electric', 'All models']
+const filters: FilterType[] = ['Plug-in Hybrid', 'All models']
 
 export default function ModelsSection() {
   const [active, setActive] = useState<FilterType>('All models')

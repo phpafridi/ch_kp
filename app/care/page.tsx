@@ -2,34 +2,34 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
-  title: 'MG Care – Service & Maintenance | MG Motors Pakistan',
-  description: 'MG Care: genuine parts, MG Motor Oil, skilled technicians, and a nationwide service network.',
+  title: 'Chery Care – Service & Maintenance | Chery KP',
+  description: 'Chery Care: genuine parts, Chery Motor Oil, skilled technicians, and a nationwide service network.',
 }
 
 const services = [
   {
-    title: 'MG Motor Oil',
-    desc: 'Introducing MG Motor Oil, expertly engineered to enhance engine performance, deliver superior protection, reduce friction, and ensure long-lasting reliability for every journey.',
+    title: 'Chery Motor Oil',
+    desc: 'Introducing Chery Motor Oil, expertly engineered to enhance engine performance, deliver superior protection, reduce friction, and ensure long-lasting reliability for every journey.',
     detail: 'Available Grades: 0W-20 SP/C5 · 5W-30 SP/C3',
-    href: '/MGMotorOil',
+    href: '/CheryMotorOil',
     cta: 'Learn More',
   },
   {
-    title: 'MG Genuine Parts',
-    desc: 'Choose MG approved genuine parts which are engineered for perfect compatibility, making sure your MG runs smoothly and preserves its exceptional performance.',
+    title: 'Chery Genuine Parts',
+    desc: 'Choose Chery approved genuine parts which are engineered for perfect compatibility, making sure your Chery runs smoothly and preserves its exceptional performance.',
     detail: null,
     href: '#',
     cta: 'Parts Price List',
   },
   {
     title: 'Skilled Manpower',
-    desc: 'Our vast network of MG-certified technicians, equipped with advanced tools and training, ensures convenience and care to keep your car performing at its best.',
+    desc: 'Our vast network of Chery-certified technicians, equipped with advanced tools and training, ensures convenience and care to keep your car performing at its best.',
     detail: null,
     href: '/care/form',
     cta: 'Book Service',
   },
   {
-    title: 'MG Warranty',
+    title: 'Chery Warranty',
     desc: "Pakistan's best-in-class 5-year / 100,000km warranty covering manufacturing defects, giving you complete peace of mind throughout your ownership.",
     detail: '5 Years / 100,000 km',
     href: '#',
@@ -44,9 +44,9 @@ export default function CarePage() {
       <section className="py-16 px-5 md:px-10 bg-[#F7F7F7]">
         <div className="max-w-[1360px] mx-auto">
           <span className="text-[#ADADAD] text-sm font-medium tracking-widest">AFTER-SALES</span>
-          <h1 className="text-4xl md:text-6xl font-light mt-4 mb-2">MG Care</h1>
+          <h1 className="text-4xl md:text-6xl font-light mt-4 mb-2">Chery Care</h1>
           <p className="text-lg text-gray-500 font-light max-w-xl">
-            Genuine parts, expert technicians, and world-class service — keeping your MG performing at its best.
+            Genuine parts, expert technicians, and world-class service — keeping your Chery performing at its best.
           </p>
         </div>
       </section>
@@ -80,8 +80,8 @@ export default function CarePage() {
               Schedule a Service
             </button>
           </Link>
-          <a href="tel:080000011" className="h-12 px-8 bg-white text-black rounded-[58px] hover:bg-gray-100 transition text-base font-light flex items-center">
-            Call 0800-00011
+          <a href="tel:03369999884" className="h-12 px-8 bg-white text-black rounded-[58px] hover:bg-gray-100 transition text-base font-light flex items-center">
+            Call 0336-9999884
           </a>
         </div>
       </section>

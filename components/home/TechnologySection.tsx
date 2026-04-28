@@ -27,7 +27,7 @@ export default function TechnologySection() {
         </div>
         </ScrollReveal>
 
-        {/* MG Pilot Card */}
+        {/* Chery Driver Assist Card */}
         <ScrollReveal animation="fade-up" delay={150}>
         <div className="md:px-8 lg:px-10">
           <div className="rounded-none md:rounded-[10px] bg-[#181818] overflow-hidden">
@@ -37,18 +37,18 @@ export default function TechnologySection() {
               <div className="flex-1 px-5 md:px-10 pt-6 md:pt-8 pb-6 md:pb-8">
                 {/* Header row */}
                 <div className="flex items-center justify-between mb-2">
-                  <p className="text-[1.5rem] md:text-[2rem] font-light text-white">MG Pilot</p>
+                  <p className="text-[1.5rem] md:text-[2rem] font-light text-white">Chery Driver Assist</p>
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/assets/mg-logo-png.png"
-                    alt="MG Logo"
+                    src="/assets/chery-logo.png"
+                    alt="Chery Logo"
                     className="h-9 w-9 md:h-12 md:w-12 object-contain opacity-80"
                   />
                 </div>
 
-                <h2 className="text-base md:text-2xl font-light text-white mb-2 md:mb-3 mt-4 md:mt-6">Driven by Safety</h2>
+                <h2 className="text-base md:text-2xl font-light text-white mb-2 md:mb-3 mt-4 md:mt-6">Driven by Intelligence</h2>
                 <p className="text-sm md:text-base font-light text-white/70 mb-5 md:mb-8 text-justify max-w-xl">
-                  MG Pilot is an advanced driver-assistance suite that gives you intelligent support across 11 safety scenarios — so you can focus on the joy of driving.
+                  Chery Driver Assist is an advanced driver-assistance suite that gives you intelligent support across 11 safety scenarios — so you can focus on the joy of driving.
                 </p>
 
                 {/* Feature grid — 4-col on mobile too but smaller */}
@@ -83,8 +83,8 @@ export default function TechnologySection() {
               <div className="lg:w-[45%] relative min-h-[200px] md:min-h-[240px] lg:min-h-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="/assets/phev/phev-updated.webp"
-                  alt="MG Pilot Car"
+                  src="/assets/tiggo8phev/tiggo8phev-updated.webp"
+                  alt="Chery Driver Assist Car"
                   className="w-full h-full object-cover object-center min-h-[200px] md:min-h-[240px]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-[#181818] via-transparent to-transparent lg:block hidden" />

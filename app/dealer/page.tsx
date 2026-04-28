@@ -8,11 +8,11 @@ const yesNo = ['Yes', 'No']
 
 const benefits = [
   { icon: '🏆', title: 'Market Leader', desc: "Join Pakistan's fastest-growing automotive brand and benefit from strong brand recognition." },
-  { icon: '📈', title: 'Proven Business Model', desc: 'Access to a proven dealership model with comprehensive support from MG headquarters.' },
+  { icon: '📈', title: 'Proven Business Model', desc: 'Access to a proven dealership model with comprehensive support from Chery headquarters.' },
   { icon: '🔧', title: 'Full Technical Training', desc: 'Factory-trained technicians and ongoing technical support for your service team.' },
   { icon: '📣', title: 'Marketing Support', desc: 'Benefit from national marketing campaigns, digital support, and co-op advertising programs.' },
-  { icon: '🚗', title: 'Full Product Range', desc: 'Access to MG\'s complete vehicle lineup including PHEV, EV, and diesel models.' },
-  { icon: '🤝', title: 'Dedicated Partner Team', desc: 'A dedicated MG partner manager assigned to support your dealership growth.' },
+  { icon: '🚗', title: 'Full Product Range', desc: 'Access to Chery\'s complete PHEV vehicle lineup including Tiggo 8, Tiggo 9, and Tiggo 7.' },
+  { icon: '🤝', title: 'Dedicated Partner Team', desc: 'A dedicated Chery partner manager assigned to support your dealership growth.' },
 ]
 
 export default function BecomeDealerPage() {
@@ -28,21 +28,21 @@ export default function BecomeDealerPage() {
     <div className="bg-white">
       {/* Hero */}
       <section className="relative bg-[#181818]">
-        <img src="/assets/Find-your-dealer-Banner2.webp" alt="Become a Dealer" className="w-full h-[280px] md:h-[480px] object-cover opacity-60" />
+        <img src="/assets/tiggo7/tiggo7-index.png" alt="Become a Dealer" className="w-full h-[280px] md:h-[480px] object-cover opacity-60" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-5">
           <span className="text-[#ADADAD] text-sm font-medium tracking-widest mb-3">PARTNERSHIP OPPORTUNITY</span>
           <h1 className="text-4xl md:text-7xl font-light text-white mb-4">Become a Dealer</h1>
           <p className="text-lg text-white/70 font-light max-w-xl">
-            Join MG&apos;s professional dealer network and be part of Pakistan&apos;s automotive future.
+            Join Chery's professional dealer network and be part of Pakistan&apos;s automotive future.
           </p>
         </div>
       </section>
 
-      {/* Why partner with MG */}
+      {/* Why partner with Chery */}
       <section className="py-16 px-5 md:px-10">
         <div className="max-w-[1360px] mx-auto">
           <span className="text-[#ADADAD] text-sm font-medium tracking-widest">WHY MG</span>
-          <h2 className="text-3xl md:text-5xl font-light mt-4 mb-10">The MG Dealer Advantage</h2>
+          <h2 className="text-3xl md:text-5xl font-light mt-4 mb-10">The Chery Dealer Advantage</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {benefits.map(b => (
               <div key={b.title} className="bg-[#F7F7F7] rounded-2xl p-7">
@@ -67,7 +67,7 @@ export default function BecomeDealerPage() {
                 'Dedicated service workshop with at least 4 bays',
                 'Experience in automotive retail or related business',
                 'Strong financial standing and access to working capital',
-                'Commitment to MG brand standards and customer experience',
+                'Commitment to Chery brand standards and customer experience',
                 'Full-time management team dedicated to the dealership',
               ].map((req, i) => (
                 <li key={i} className="flex gap-4 items-start">
@@ -83,8 +83,8 @@ export default function BecomeDealerPage() {
             {[
               {step:'Submit Application', desc:'Fill out the form below with your personal and business details.'},
               {step:'Initial Review', desc:'Our team reviews your application within 5–7 business days.'},
-              {step:'Site Visit & Meeting', desc:'MG team visits your proposed location and meets with you.'},
-              {step:'Approval & Onboarding', desc:'Upon approval, begin the MG onboarding and training program.'},
+              {step:'Site Visit & Meeting', desc:'Chery team visits your proposed location and meets with you.'},
+              {step:'Approval & Onboarding', desc:'Upon approval, begin the Chery onboarding and training program.'},
             ].map((s, i) => (
               <div key={i} className="flex gap-4 mb-6">
                 <span className="text-3xl font-light text-gray-200 w-10 flex-shrink-0">0{i+1}</span>
@@ -173,7 +173,7 @@ export default function BecomeDealerPage() {
               <div className="flex items-start gap-3 pt-2">
                 <input type="checkbox" id="agree" checked={agreed} onChange={e => setAgreed(e.target.checked)} className="mt-1" />
                 <label htmlFor="agree" className="text-xs text-gray-500">
-                  I agree to the <a href="/privacy-policy" className="underline">terms & conditions</a> and consent to MG contacting me regarding this application.
+                  I agree to the <a href="/privacy-policy" className="underline">terms & conditions</a> and consent to Chery contacting me regarding this application.
                 </label>
               </div>
               <button onClick={() => { if(agreed) setSubmitted(true) }} disabled={!agreed}

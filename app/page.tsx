@@ -3,12 +3,11 @@ import HeroCarousel from '@/components/home/HeroCarousel'
 import ModelsSection from '@/components/home/ModelsSection'
 import AboutSection from '@/components/home/AboutSection'
 import TechnologySection from '@/components/home/TechnologySection'
-import NewsSection from '@/components/home/NewsSection'
 import ContactCardsSection from '@/components/home/ContactCardsSection'
 
 export const metadata: Metadata = {
-  title: 'MG Motors Pakistan – Ideal Solution for Urban Mobility',
-  description: "Explore MG Motors Pakistan's lineup of hybrid, electric and diesel vehicles. MG HS PHEV, MG U9, MG Cyberster, Binguo EV. Book a test drive today.",
+  title: 'Chery KP – Ideal Solution for Urban Mobility',
+  description: "Explore Chery KP's lineup of hybrid, electric and diesel vehicles. Chery Tiggo 8 PHEV, Chery Tiggo 7 PHEV, Chery Tiggo 9 PHEV, Chery Tiggo 8. Book a test drive today.",
 }
 
 export default function HomePage() {
@@ -18,7 +17,6 @@ export default function HomePage() {
       <ModelsSection />
       <AboutSection />
       <TechnologySection />
-      <NewsSection />
       <ContactCardsSection />
     </>
   )

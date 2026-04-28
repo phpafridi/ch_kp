@@ -1,34 +1,34 @@
-export const phevSections = [
-  { id: 'hero',          label: 'MG HS PHEV' },
+export const tiggo8phevSections = [
+  { id: 'hero',          label: 'Chery Tiggo 8 PHEV' },
   { id: 'safety',        label: 'Safety' },
   { id: 'performance',   label: 'Performance' },
   { id: 'plugin-hybrid', label: 'Plug-in Hybrid' },
-  { id: 'mg-pilot',      label: 'MG Pilot' },
+  { id: 'mg-pilot',      label: 'Chery Driver Assist' },
   { id: 'design',        label: 'Design' },
   { id: 'comfort',       label: 'Comfort' },
   { id: 'specs',         label: 'Specifications' },
 ]
 
-export const phevHeroStats = [
+export const tiggo8phevHeroStats = [
   { value: '7.1 seconds', label: '0-100 KM/H' },
-  { value: 'MG Pilot',    label: 'Driver Assistance' },
+  { value: 'Chery Driver Assist',    label: 'Driver Assistance' },
   { value: '+50 KM',      label: 'True Electric Range' },
 ]
 
-export const phevSafetyStats = [
+export const tiggo8phevSafetyStats = [
   { value: '0.34kW',   label: 'Max Power' },
   { value: '198Nm',    label: 'Max Torque' },
   { value: '16.6kWh',  label: 'Battery' },
 ]
 
-export const phevBatterySpecs = [
+export const tiggo8phevBatterySpecs = [
   { key: 'Battery Capacity',  value: '16.6 kWh' },
   { key: 'Electric Range',    value: '+50 km' },
   { key: 'Battery Type',      value: 'Ternary Lithium' },
   { key: 'Combined Output',   value: '249 kW' },
 ]
 
-export const phevPilotFeatures = [
+export const tiggo8phevPilotFeatures = [
   { img: '/assets/mg-pilot-imgs/tja.webp',  code: 'TJA',  name: 'Traffic Jam Assist' },
   { img: '/assets/mg-pilot-imgs/acc.webp',  code: 'ACC',  name: 'Adaptive Cruise Control' },
   { img: '/assets/mg-pilot-imgs/aeb.webp',  code: 'AEB',  name: 'Active Emergency Braking' },
@@ -39,13 +39,13 @@ export const phevPilotFeatures = [
   { img: '/assets/mg-pilot-imgs/sas.webp',  code: 'SAS',  name: 'Driver Attention Alert' },
 ]
 
-export const phevDesignFeatures = [
+export const tiggo8phevDesignFeatures = [
   { title: 'Emotional Design',  subtitle: 'Vigorous & Dynamic Identity' },
   { title: 'Light Expression',  subtitle: 'Interactive Touch' },
   { title: 'Sporty Interior',   subtitle: 'Immersive Driving Experience' },
 ]
 
-export const phevComfortFeatures = [
+export const tiggo8phevComfortFeatures = [
   'Wireless Apple CarPlay & Android Auto',
   'Wireless Charging Pad',
   'Panoramic Sunroof',
@@ -56,7 +56,7 @@ export const phevComfortFeatures = [
   'Keyless Entry & Start',
 ]
 
-export const phevSpecs = [
+export const tiggo8phevSpecs = [
   ['Engine',            '1.5T Turbocharged Petrol + Electric Motor'],
   ['Combined Power',    '249 kW (334 hp)'],
   ['0–100 km/h',        '7.1 seconds'],

@@ -1,5 +1,5 @@
-export const binguoSections = [
-  { id: 'hero',      label: 'Binguo EV' },
+export const tiggo8Sections = [
+  { id: 'hero',      label: 'Chery Tiggo 8' },
   { id: 'range',     label: 'Range' },
   { id: 'battery',   label: 'Battery' },
   { id: 'exterior',  label: 'Exterior' },
@@ -7,20 +7,20 @@ export const binguoSections = [
   { id: 'specs',     label: 'Specifications' },
 ]
 
-export const binguoHeroStats = [
+export const tiggo8HeroStats = [
   { value: 'Up to 333 KM', label: 'CLTC Range' },
   { value: '31.9 kWh',     label: 'MAGIC Battery' },
   { value: 'CCS2',         label: 'DC Fast Charging' },
 ]
 
-export const binguoRangeStats = [
+export const tiggo8RangeStats = [
   { value: 'Up to 333 KM', label: 'CLTC Range' },
   { value: '31.9 kWh',     label: 'Battery Capacity' },
   { value: '125 Nm',       label: 'Torque' },
   { value: '~35 min',      label: 'Fast Charge 10–80%' },
 ]
 
-export const binguoBatterySpecs = [
+export const tiggo8BatterySpecs = [
   { key: 'Battery Type',        value: 'MAGIC Ternary Lithium' },
   { key: 'Capacity',            value: '31.9 kWh' },
   { key: 'Charging',            value: 'CCS2 AC + DC' },
@@ -28,7 +28,7 @@ export const binguoBatterySpecs = [
   { key: 'Thermal Management',  value: 'Active Liquid Cooling' },
 ]
 
-export const binguoExteriorFeatures = [
+export const tiggo8ExteriorFeatures = [
   { img: '/assets/Interior1.png', label: 'Electric Foldable Mirror' },
   { img: '/assets/Interior2.png', label: 'CCS2 DC Fast Charging' },
   { img: '/assets/Interior3.png', label: 'Two-Tone Body Colour' },
@@ -39,7 +39,7 @@ export const binguoExteriorFeatures = [
   { img: '/assets/Interior2.png', label: 'Diamond Shaped Grille' },
 ]
 
-export const binguoInteriorFeatures = [
+export const tiggo8InteriorFeatures = [
   'Stylish and Modern Interior Design',
   'Fresh Exterior Colors with Rounded Aesthetic',
   'Comfortable Seating for Daily Commuting',
@@ -49,7 +49,7 @@ export const binguoInteriorFeatures = [
   'Digital Instrument Cluster',
 ]
 
-export const binguoSpecs = [
+export const tiggo8Specs = [
   ['Motor',           'Permanent Magnet Synchronous'],
   ['Power',           '115 kW'],
   ['Torque',          '125 Nm'],

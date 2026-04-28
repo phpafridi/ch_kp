@@ -9,7 +9,7 @@ interface ButtonProps {
   external?: boolean
 }
 
-export default function MGButton({ href, onClick, children, variant = 'outline', className = '', external }: ButtonProps) {
+export default function CheryButton({ href, onClick, children, variant = 'outline', className = '', external }: ButtonProps) {
   const base = `relative overflow-hidden h-12 px-8 rounded-[58px] cursor-pointer group transition-all duration-300
     ${variant === 'solid'
       ? 'bg-black text-white border border-black hover:bg-gray-800'

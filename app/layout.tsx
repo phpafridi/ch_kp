@@ -12,18 +12,19 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'MG Motors Pakistan - Ideal Solution for Urban Mobility',
-  description: 'MG Motors Pakistan redefines urban mobility with smart, stylish, and fuel-efficient SUVs. Combining British heritage with modern innovation.',
-  openGraph: {
-    title: 'MG Motors Pakistan - Ideal Solution for Urban Mobility',
-    description: 'Experience British heritage with modern innovation in SUVs.',
-    url: 'https://mgmotors.com.pk',
+  title: 'Chery KP - Ideal Solution for Urban Mobility',
+  description: 'Chery KP redefines urban mobility with smart, stylish, and fuel-efficient SUVs. Combining British heritage with modern innovation.',
+  icons: { icon: '/favicon.ico', apple: '/assets/chery-logo.png' },
+    openGraph: {
+    title: 'Chery KP - Ideal Solution for Urban Mobility',
+    description: 'Explore Chery\'s fifth-generation PHEV hybrid SUVs in Pakistan.',
+    url: 'https://cherykp.com',
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@mgmotorpakistan',
-    title: 'MG Motors Pakistan - Premium Cars',
-    description: 'Explore premium SUVs and sedans at MG Motors Pakistan.',
+    site: '@cherykp',
+    title: 'Chery KP - Premium Cars',
+    description: 'Explore premium SUVs and sedans at Chery KP.',
   },
 }
 
@@ -36,7 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         {/* WhatsApp floating button */}
         <a
-          href="https://wa.me/+923164411664"
+          href="https://wa.me/923369999884"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Chat with us on WhatsApp"

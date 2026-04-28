@@ -1,5 +1,5 @@
-export const mgu9Sections = [
-  { id: 'hero',        label: 'MG U9' },
+export const tiggo7Sections = [
+  { id: 'hero',        label: 'Chery Tiggo 7 PHEV' },
   { id: 'capability',  label: 'Capability' },
   { id: 'smart-hatch', label: 'Smart Hatch' },
   { id: 'safety',      label: 'Safety' },
@@ -7,13 +7,13 @@ export const mgu9Sections = [
   { id: 'specs',       label: 'Specifications' },
 ]
 
-export const mgu9HeroStats = [
+export const tiggo7HeroStats = [
   { value: '2.5L Turbo', label: 'Diesel Engine' },
   { value: '4×4',        label: 'Intelligent System' },
   { value: '1,600L',     label: 'Smart Hatch Space' },
 ]
 
-export const mgu9CapabilityFeatures = [
+export const tiggo7CapabilityFeatures = [
   {
     img:   '/assets/Interior1.png',
     title: 'Independent Multi-Link Suspension',
@@ -31,20 +31,20 @@ export const mgu9CapabilityFeatures = [
   },
 ]
 
-export const mgu9HatchStats = [
+export const tiggo7HatchStats = [
   { value: '1,600L',   label: 'Max Cargo Volume' },
   { value: '2.4m',     label: 'Max Load Length' },
   { value: 'Electric', label: 'Tailgate Opening' },
 ]
 
-export const mgu9SafetyFeatures = [
+export const tiggo7SafetyFeatures = [
   { img: '/assets/mg-pilot-imgs/aeb.webp', code: 'AEB', name: 'Active Emergency Braking' },
   { img: '/assets/mg-pilot-imgs/bsm.webp', code: 'BSM', name: 'Blind Spot Detection' },
   { img: '/assets/mg-pilot-imgs/rta.webp', code: 'RTA', name: 'Rear Cross Traffic Alert' },
   { img: '/assets/mg-pilot-imgs/lka.webp', code: 'LKA', name: 'Lane Keep Assist' },
 ]
 
-export const mgu9ComfortFeatures = [
+export const tiggo7ComfortFeatures = [
   'Wireless Apple CarPlay & Android Auto',
   'Wireless Charging',
   "Heated, Ventilated & Massage Driver's Seat",
@@ -55,7 +55,7 @@ export const mgu9ComfortFeatures = [
   'Premium Audio System',
 ]
 
-export const mgu9Specs = [
+export const tiggo7Specs = [
   ['Engine',          '2.5L Turbo Diesel'],
   ['Max Power',       '150 kW (201 hp)'],
   ['Max Torque',      '480 Nm'],
@@ -66,6 +66,6 @@ export const mgu9Specs = [
   ['Towing Capacity', 'Up to 2,500 kg'],
   ['Smart Hatch',     'Up to 1,600L'],
   ['Max Load Length', '2.4 m'],
-  ['Safety',          'MG Pilot Suite + 6 Airbags'],
+  ['Safety',          'Chery Driver Assist Suite + 6 Airbags'],
   ['Starting Price',  'PKR 22,749,000/-'],
 ]

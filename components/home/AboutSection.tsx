@@ -6,24 +6,24 @@ import ScrollReveal from '@/components/ui/ScrollReveal'
 
 const tabs = [
   {
-    label: 'Drivability',
-    img: '/assets/phev/phev-updated.webp',
-    text: 'The future of driving is here, with every detail crafted for a smoother, smarter, and safer journey. From advanced safety features to thoughtful comfort, MG ensures a confident and reliable driving experience, no matter your destination.',
+    label: 'Innovation',
+    img: '/assets/tiggo8phev/tiggo8-index.png',
+    text: 'Chery leads with fifth-generation hybrid technology — the Dedicated Hybrid Engine (DHE), Dedicated Hybrid Transmission (DHT), and Dedicated Hybrid Battery (DHB). Every Chery vehicle is engineered for smarter, more efficient performance.',
   },
   {
     label: 'Attainability',
-    img: '/assets/MG_LP_Desk_HeroHeader_768_br.webp',
-    text: 'MG makes premium ownership accessible. With competitive pricing, flexible bank financing through 9 partner banks, and a nationwide dealer network, your MG is closer than you think.',
+    img: '/assets/tiggo8phev/hero.jpg',
+    text: 'Chery makes premium ownership accessible. With competitive pricing, flexible bank financing, and a nationwide dealer network across Pakistan, your Chery is closer than you think.',
   },
   {
-    label: 'Resourcefulness',
-    img: '/assets/mg-binguo/banner/CtymTX.webp',
-    text: 'From plug-in hybrid to full electric, MG powertrains are engineered to do more with less. Intelligent energy management means lower running costs, longer range, and a drive that adapts to your life.',
+    label: 'Performance',
+    img: '/assets/tiggo8phev/tiggo8-oil.png',
+    text: 'From plug-in hybrid to full PHEV, Chery powertrains are engineered to do more with less. Intelligent energy management means lower running costs, longer range, and a drive that adapts to your life. Combined range of 1200 km.',
   },
   {
-    label: 'Environment',
-    img: '/assets/MG_cyberster_Desk_HeroHeader.webp',
-    text: 'Stay in control, stay connected. With MG, intuitive safety systems and seamless technology adapt to your needs — enhancing every drive with confidence and clarity.',
+    label: 'Family',
+    img: '/assets/tiggo9/tiggo9-index.png',
+    text: 'At Chery, we believe a car should be more than a machine — it should be a space of connection. From the 7-seater Tiggo 8 to the spacious Tiggo 9, every Chery is crafted for family journeys.',
   },
 ]
 
@@ -49,7 +49,7 @@ export default function AboutSection() {
 
           {/* Label + tab headers */}
           <ScrollReveal animation="fade-up" delay={0}>
-          <span className="text-xs md:text-sm font-medium text-[#ADADAD] tracking-widest">ABOUT MG</span>
+          <span className="text-xs md:text-sm font-medium text-[#ADADAD] tracking-widest">ABOUT CHERY</span>
 
           {/* Tab buttons — 2×2 grid on mobile, single row on md+ */}
           <div className="grid grid-cols-2 gap-x-4 gap-y-3 md:flex md:gap-14 mt-3 md:mt-4 mb-5 md:mb-8">
@@ -125,9 +125,9 @@ export default function AboutSection() {
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black/20">
               <div className="text-center text-white">
-                <p className="text-xl md:text-4xl font-light">5-Year Warranty</p>
+                <p className="text-xl md:text-4xl font-light">Established 1997</p>
                 <p className="text-xs md:text-base text-white/80 mt-0.5 md:mt-1">
-                  Pakistan&apos;s best-in-class — 100,000 km coverage
+                  China's No.1 Automobile Exporter — Global Reach
                 </p>
               </div>
             </div>

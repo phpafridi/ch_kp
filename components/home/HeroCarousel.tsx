@@ -7,75 +7,51 @@ const INTERVAL = 6000
 
 const slides = [
   {
-    src: '/assets/phev/phev-updated.webp',
-    href: '/model/phev',
-    label: 'MG HS PHEV',
-    title: 'MG HS PHEV',
-    subtitle: 'True Hybrid Electric',
+    src: '/assets/tiggo8phev/tiggo8-index.png',
+    href: '/model/tiggo8phev',
+    label: 'Chery Tiggo 8 PHEV',
+    title: 'Chery Tiggo 8 PHEV',
+    subtitle: "Pakistan's Only 7-Seater PHEV D-SUV",
     stats: [
-      { value: '7.1 seconds', label: '0-100 KM/H' },
-      { value: 'MG Pilot', label: 'Driver Assistance' },
-      { value: '+50 KM', label: 'True Electric Range' },
+      { value: '6.8 seconds', label: '0-100 KM/H' },
+      { value: '496 hp', label: 'Combined Power' },
+      { value: '90 KM', label: 'Pure EV Range' },
     ],
   },
   {
-    src: '/assets/MG_cyberster_Desk_HeroHeader.webp',
-    href: '/model/cyberster',
-    label: 'MG Cyberster',
-    title: 'MG Cyberster',
-    subtitle: '100% Electric Roadster',
+    src: '/assets/tiggo9/tiggo9-index.png',
+    href: '/model/tiggo9',
+    label: 'Chery Tiggo 9 PHEV',
+    title: 'Chery Tiggo 9 PHEV',
+    subtitle: 'E-Segment Premium Luxury SUV',
     stats: [
-      { value: '375 kW', label: 'Max Power' },
-      { value: '3.2 Sec', label: '0-100 km/h' },
-      { value: '507 KM', label: 'Electric Range' },
+      { value: '1.5T', label: 'TGDI Engine' },
+      { value: '44.5%', label: 'Thermal Efficiency' },
+      { value: '1200 km', label: 'Combined Range' },
     ],
   },
   {
-    src: '/assets/Find-your-dealer-Banner2.webp',
-    href: '/model/mgu9',
-    label: 'MG U9',
-    title: 'MG U9',
-    subtitle: 'True Luxury Off-Roader',
+    src: '/assets/tiggo7/tiggo7-index.png',
+    href: '/model/tiggo7',
+    label: 'Chery Tiggo 7 PHEV',
+    title: 'Chery Tiggo 7 PHEV',
+    subtitle: 'C-Segment Smart Hybrid SUV',
     stats: [
-      { value: '2.5L', label: 'Turbo Diesel' },
-      { value: '4×4', label: 'Intelligent System' },
-      { value: '1,600L', label: 'Smart Hatch Space' },
+      { value: 'PHEV', label: 'Hybrid Technology' },
+      { value: 'L2', label: 'Driver Assist' },
+      { value: '5th Gen', label: 'Hybrid System' },
     ],
   },
   {
-    src: '/assets/mg-binguo/banner/CtymTX.webp',
-    href: '/model/binguo',
-    label: 'Binguo EV',
-    title: 'Binguo EV',
-    subtitle: 'Designed to Stand Out',
-    stats: [
-      { value: '333 KM', label: 'CLTC Range' },
-      { value: '31.9 kWh', label: 'MAGIC Battery' },
-      { value: 'CCS2', label: 'Fast Charging' },
-    ],
-  },
-  {
-    src: '/assets/MG_LP_Desk_HeroHeader_768_br.webp',
-    href: '/mg-partnerships',
+    src: '/assets/tiggo8phev/hero.jpg',
+    href: '/chery-partnerships',
     label: 'Financing',
     title: 'Flexible Financing',
     subtitle: 'Bank Partnerships',
     stats: [
-      { value: '9', label: 'Partner Banks' },
+      { value: 'Multiple', label: 'Partner Banks' },
       { value: 'Islamic', label: '& Conventional' },
-      { value: '7 Year', label: 'Max Tenure' },
-    ],
-  },
-  {
-    src: '/assets/Find-your-dealer-Banner2.webp',
-    href: '/mg-exchange',
-    label: 'MG Exchange',
-    title: 'MG Exchange',
-    subtitle: 'Trade In. Upgrade.',
-    stats: [
-      { value: 'Fair', label: 'Market Value' },
-      { value: 'Zero', label: 'Hassle Process' },
-      { value: '6-Month', label: 'Used Car Warranty' },
+      { value: 'Easy', label: 'Installments' },
     ],
   },
 ]
@@ -207,7 +183,7 @@ export default function HeroCarousel() {
           key={`cta-${active}`}
           style={{ animation: 'slideUp 0.5s ease 0.3s both' }}
         >
-          <Link href="/book-my-mg">
+          <Link href="/book-my-chery">
             <button className="w-48 h-12 bg-white text-black rounded-full text-sm font-medium hover:bg-gray-100 transition-colors">
               Book Now
             </button>

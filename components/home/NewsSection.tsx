@@ -3,14 +3,14 @@ import ScrollReveal from '@/components/ui/ScrollReveal'
 
 const newsItems = [
   {
-    imgSrc: `/assets/mg-binguo/banner/CtymTX.webp`,
-    title: 'MG unveils the all-new MG U9 and Binguo EV at Pakistan Auto Show 2025.',
-    excerpt: 'MG launched two new vehicles, the MG U9 truck, and the Binguo EV at the Pakistan Auto Show 2025 in Karachi with an overwhelming response from the audience.',
+    imgSrc: `/assets/tiggo8phev/tiggo8-oil.png`,
+    title: 'Chery KP launches Tiggo 8 PHEV at PKR 10,999,000 — Pakistan\'s only 7-Seater PHEV D-SUV.',
+    excerpt: 'Chery KP has officially launched the Tiggo 8 PHEV, offering a combined range of 1200 km, 496 hp, and a spacious 7-seat cabin packed with premium technology.',
   },
   {
-    imgSrc: `/assets/phev/phev-updated.webp`,
-    title: 'MG at the 2025 Pakistan Auto Show: Flooded stalls and Exotic cars.',
-    excerpt: "MG's display became the main focus for car enthusiasts at the Pakistan Auto Show 2025 in Karachi featuring its latest vehicles along with the MG Cyberster, MG HS PHEV, and the MG4 electric.",
+    imgSrc: `/assets/tiggo8phev/tiggo8-index.png`,
+    title: 'Chery Tiggo 9 PHEV and Tiggo 7 PHEV: E-Segment and C-Segment PHEV SUVs coming to Pakistan.',
+    excerpt: "Chery KP unveils its full PHEV lineup — the flagship Tiggo 9 and the practical Tiggo 7 — bringing fifth-generation hybrid technology to Pakistani roads.",
   },
 ]
 
@@ -22,16 +22,16 @@ export default function NewsSection() {
           {/* Header */}
           <div className="px-4 md:px-8 lg:px-10">
             <ScrollReveal animation="fade-up" delay={0}>
-            <span className="text-sm md:text-base leading-5 font-medium text-[#ADADAD]">World of MG</span>
+            <span className="text-sm md:text-base leading-5 font-medium text-[#ADADAD]">World of Chery</span>
             <div className="flex flex-col md:flex-row md:justify-between md:items-center mt-2 md:mt-10">
               <div className="flex flex-col">
                 <h1 className="font-light text-gray-900 text-[26px] md:text-6xl pb-2 md:pb-6">Latest on Mobility</h1>
                 <p className="font-light text-gray-900 text-sm md:text-[1.75rem] max-w-full pb-3 md:pb-6">
-                  Stay Updated on the Latest Trends in Automobile Industry.
+                  Stay Updated on the Latest Chery News.
                 </p>
               </div>
               <div className="mb-4 md:mb-0">
-                <Link href="/world-of-mg">
+                <Link href="/world-of-chery">
                   <button className="relative overflow-hidden h-10 md:h-12 px-6 md:px-8 border border-black rounded-[58px] bg-white text-black hover:text-white cursor-pointer group">
                     <span className="text-sm md:text-base font-light relative z-10">See all News</span>
                     <span className="absolute top-0 left-0 w-full h-full bg-black scale-x-0 transition-transform duration-300 origin-left group-hover:scale-x-100" />
@@ -55,7 +55,7 @@ export default function NewsSection() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src="https://img.youtube.com/vi/dVuHIDXZsO4/maxresdefault.jpg"
-                  alt="Play MG HS PHEV video"
+                  alt="Play Chery Tiggo 8 PHEV video"
                   className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -80,9 +80,9 @@ export default function NewsSection() {
             </div>
             <div className="flex flex-col gap-3 md:gap-8">
               <p className="text-sm md:text-base leading-6 font-normal text-gray-500 text-justify md:max-w-[600px]">
-                MG&apos;s Latest Ad Campaign for the MG HS PHEV Boldly Celebrates Innovation, Showcasing MG&apos;s Leadership in Hybrid Technology.
+                Chery&apos;s Latest Campaign for the Tiggo 8 PHEV Boldly Celebrates Innovation, Showcasing Chery&apos;s Leadership in Hybrid Technology.
               </p>
-              <Link href="/world-of-mg">
+              <Link href="/world-of-chery">
                 <button className="flex gap-2 items-center group">
                   <span className="text-sm md:text-base font-normal text-gray-900">Read the Story</span>
                   <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,7 +113,7 @@ export default function NewsSection() {
                     <p className="text-base md:text-2xl font-medium text-black text-justify leading-tight mb-2">{item.title}</p>
                     <div className="flex flex-col max-w-[518px]">
                       <p className="text-sm md:text-base leading-6 font-normal text-gray-500 text-justify">{item.excerpt}</p>
-                      <Link href="/world-of-mg" className="mt-5 md:mt-9">
+                      <Link href="/world-of-chery" className="mt-5 md:mt-9">
                         <button className="flex gap-2 items-center">
                           <span className="text-sm md:text-base font-normal text-gray-900">Read the Story</span>
                           <svg width="13" height="12" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">

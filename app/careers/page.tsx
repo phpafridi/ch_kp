@@ -26,11 +26,11 @@ export default function CareersPage() {
         <div className="max-w-[1360px] mx-auto">
           <span className="text-[#ADADAD] text-sm font-medium tracking-widest">JOIN US</span>
           <h1 className="text-4xl md:text-6xl font-light mt-4 mb-2">Careers at MG</h1>
-          <p className="text-xl font-light text-gray-500">Apply Now and Become a Part of MG Motors Pakistan!</p>
+          <p className="text-xl font-light text-gray-500">Apply Now and Become a Part of Chery KP!</p>
         </div>
       </section>
 
-      {/* Why MG */}
+      {/* Why Chery */}
       <section className="py-16 px-5 md:px-10">
         <div className="max-w-[1360px] mx-auto">
           <h2 className="text-3xl font-light mb-10 text-center">Why Work at MG?</h2>

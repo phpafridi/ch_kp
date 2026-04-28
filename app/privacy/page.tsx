@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-export const metadata: Metadata = { title: 'Cookie Policy | MG Motors Pakistan' }
+export const metadata: Metadata = { title: 'Cookie Policy | Chery KP' }
 export default function Page() {
   return (
     <div className="max-w-[900px] mx-auto py-16 px-5 md:px-10">

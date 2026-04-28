@@ -8,7 +8,7 @@ export default function ServiceFormPage() {
   return (
     <div className="bg-white">
       <section className="py-16 px-5 md:px-10 bg-[#F7F7F7]">
-        <div className="max-w-[900px] mx-auto"><span className="text-[#ADADAD] text-sm font-medium tracking-widest">MG CARE</span><h1 className="text-4xl md:text-5xl font-light mt-4">Schedule a Service</h1></div>
+        <div className="max-w-[900px] mx-auto"><span className="text-[#ADADAD] text-sm font-medium tracking-widest">CHERY CARE</span><h1 className="text-4xl md:text-5xl font-light mt-4">Schedule a Service</h1></div>
       </section>
       <section className="py-16 px-5 md:px-10">
         <div className="max-w-[700px] mx-auto">
@@ -19,7 +19,7 @@ export default function ServiceFormPage() {
             </div>
           ) : (
             <div className="space-y-5">
-              {[{name:'name',label:'Full Name *',type:'text'},{name:'phone',label:'Phone Number *',type:'tel'},{name:'email',label:'Email Address',type:'email'},{name:'model',label:'Vehicle Model *',type:'text',placeholder:'e.g. MG HS PHEV'},{name:'reg',label:'Registration Number *',type:'text',placeholder:'e.g. ABC-123'}].map(f=>(
+              {[{name:'name',label:'Full Name *',type:'text'},{name:'phone',label:'Phone Number *',type:'tel'},{name:'email',label:'Email Address',type:'email'},{name:'model',label:'Vehicle Model *',type:'text',placeholder:'e.g. Chery Tiggo 8 PHEV'},{name:'reg',label:'Registration Number *',type:'text',placeholder:'e.g. ABC-123'}].map(f=>(
                 <div key={f.name}><label className="block text-sm text-gray-500 mb-1">{f.label}</label>
                 <input type={f.type} name={f.name} onChange={handleChange} placeholder={(f as any).placeholder} className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-black transition" /></div>
               ))}
