@@ -160,7 +160,7 @@ export default function AboutPage() {
 
       {/* ── ABOUT CHERY ── */}
       <section className="py-20 px-5 md:px-10">
-        <div className="max-w-[1360px] mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-[1360px] mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div>
             <span className="text-xs tracking-[0.2em] font-semibold text-gray-400 uppercase mb-4 block">About Chery</span>
             <h2 className="text-4xl md:text-5xl font-light mb-8 leading-tight">China's No.1 Passenger<br/>Vehicle Exporter</h2>
@@ -170,10 +170,10 @@ export default function AboutPage() {
               <p>From the success of the Tiggo series to its strong foothold in key markets like the UAE, Saudi Arabia, Australia, and Malaysia, Chery's global legacy reflects a commitment to excellence and driving trust across generations.</p>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative overflow-visible">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/about/slider-img-2.jpg" alt="Chery Global" className="w-full rounded-2xl object-cover h-[420px]" />
-            <div className="absolute -bottom-5 -left-5 bg-black text-white rounded-xl px-6 py-4 shadow-xl hidden md:block">
+            <img src="/assets/about/slider-img-2.jpg" alt="Chery Global" className="w-full rounded-2xl object-cover h-[380px] md:h-[420px]" />
+            <div className="absolute bottom-4 left-4 bg-black text-white rounded-xl px-6 py-4 shadow-xl hidden md:block">
               <p className="text-3xl font-light">22</p>
               <p className="text-xs tracking-widest text-gray-400 uppercase">Consecutive Years #1</p>
             </div>
@@ -183,11 +183,11 @@ export default function AboutPage() {
 
       {/* ── ABOUT MAE ── */}
       <section className="bg-[#F7F7F7] py-20 px-5 md:px-10">
-        <div className="max-w-[1360px] mx-auto grid md:grid-cols-2 gap-16 items-center">
+        <div className="max-w-[1360px] mx-auto grid md:grid-cols-2 gap-10 items-center">
           <div className="order-2 md:order-1 relative">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/assets/about/slider-img.jpg" alt="MAE Distribution Agreement Signing" className="w-full rounded-2xl object-cover h-[420px]" />
-            <div className="absolute -bottom-5 -right-5 bg-white rounded-xl px-6 py-4 shadow-xl border border-gray-100 hidden md:block">
+            <img src="/assets/about/slider-img.jpg" alt="MAE Distribution Agreement Signing" className="w-full rounded-2xl object-cover h-[380px] md:h-[420px]" />
+            <div className="absolute bottom-4 right-4 bg-white rounded-xl px-6 py-4 shadow-xl border border-gray-100 hidden md:block">
               <p className="text-3xl font-light">60+</p>
               <p className="text-xs tracking-widest text-gray-500 uppercase">Years of Excellence</p>
             </div>

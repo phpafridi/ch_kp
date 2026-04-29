@@ -23,9 +23,15 @@ export const tiggo9Specs = [
 ]
 
 export const tiggo9DesignImages = [
-  { src: '/assets/tiggo9/pic01.jpg', alt: 'Tiggo 9 PHEV Front View' },
-  { src: '/assets/tiggo9/pic02.jpg', alt: 'Tiggo 9 PHEV Side View' },
-  { src: '/assets/tiggo9/pic03.jpg', alt: 'Tiggo 9 PHEV Rear View' },
+  { src: '/assets/tiggo9/cover2.webp',  alt: 'Tiggo 9 PHEV Front View' },
+  { src: '/assets/tiggo9/second9.webp', alt: 'Tiggo 9 PHEV Side View' },
+  { src: '/assets/tiggo9/asset-4.png',  alt: 'Tiggo 9 PHEV Detail' },
+]
+
+export const tiggo9InteriorImages = [
+  { src: '/assets/tiggo9/asset-5.png', alt: 'Tiggo 9 Interior' },
+  { src: '/assets/tiggo9/asset-6.png', alt: 'Tiggo 9 Cabin' },
+  { src: '/assets/tiggo9/asset-7.png', alt: 'Tiggo 9 Seats' },
 ]
 
 export const tiggo9DesignQuote = {

@@ -7,19 +7,19 @@ import ScrollReveal from '@/components/ui/ScrollReveal'
 type FilterType = 'All models' | 'Plug-in Hybrid'
 const models = [
   {
-    href: '/model/tiggo8phev',
+    href: '/contact',
     name: 'Chery Tiggo 8 PHEV',
     subtitle: "Pakistan's Only 7-Seater PHEV D-SUV",
     type: 'Plug-in Hybrid' as FilterType,
     typeColor: 'text-[#15DB41]',
     iconSrc: '/assets/plugin-icon.svg',
     imgSrc: '/assets/tiggo8phev/tiggo8-index.png',
-    price: 'PKR: 10,999,000/-',
-    priceLabel: 'Ex-Factory Price',
-    inquire: false,
+    price: null,
+    priceLabel: null,
+    inquire: true,
   },
   {
-    href: '/model/tiggo9',
+    href: '/contact',
     name: 'Chery Tiggo 9 PHEV',
     subtitle: 'E-Segment Premium SUV',
     type: 'Plug-in Hybrid' as FilterType,
@@ -31,7 +31,7 @@ const models = [
     inquire: true,
   },
   {
-    href: '/model/tiggo7',
+    href: '/contact',
     name: 'Chery Tiggo 7 PHEV',
     subtitle: 'C-Segment Smart Hybrid',
     type: 'Plug-in Hybrid' as FilterType,

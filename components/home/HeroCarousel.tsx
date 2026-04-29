@@ -7,76 +7,67 @@ const INTERVAL = 6000
 
 const slides = [
   {
-    src: '/assets/tiggo8phev/tiggo8-index.png',
-    href: '/model/tiggo8phev',
-    label: 'Chery Tiggo 8 PHEV',
-    title: 'Chery Tiggo 8 PHEV',
-    subtitle: "Pakistan's Only 7-Seater PHEV D-SUV",
-    stats: [
-      { value: '6.8 seconds', label: '0-100 KM/H' },
-      { value: '496 hp', label: 'Combined Power' },
-      { value: '90 KM', label: 'Pure EV Range' },
-    ],
-  },
-  {
-    src: '/assets/tiggo9/tiggo9-index.png',
+    src: '/assets/tiggo9/tiggo9banner.jpg',
     href: '/model/tiggo9',
     label: 'Chery Tiggo 9 PHEV',
     title: 'Chery Tiggo 9 PHEV',
     subtitle: 'E-Segment Premium Luxury SUV',
+    textDark: false,
+    // bright lifestyle image — light gradient from left only
+    overlay: 'bg-gradient-to-r from-black/50 via-black/20 to-transparent',
+    overlayBottom: 'bg-gradient-to-t from-black/40 via-transparent to-transparent',
+    objectPos: '60% 50%',
     stats: [
-      { value: '1.5T', label: 'TGDI Engine' },
-      { value: '44.5%', label: 'Thermal Efficiency' },
-      { value: '1200 km', label: 'Combined Range' },
+      { value: '1.5T',    label: 'TGDI Engine' },
+      { value: '1,400 km', label: 'Combined Range' },
+      { value: '7 Seats', label: 'Premium Cabin' },
     ],
+    cta: { primary: 'Inquire Now', secondary: 'Learn More', primaryHref: '/book-my-chery', secondaryHref: '/model/tiggo9' },
   },
   {
-    src: '/assets/tiggo7/tiggo7-index.png',
+    src: '/assets/tiggo8/Asset-2.webp',
+    href: '/model/tiggo8',
+    label: 'Chery Tiggo 8 PHEV',
+    title: 'Chery Tiggo 8 PHEV',
+    subtitle: 'D-Segment Premium Luxury SUV',
+    textDark: false,
+    overlay: 'bg-gradient-to-r from-black/55 via-black/20 to-transparent',
+    overlayBottom: 'bg-gradient-to-t from-black/40 via-transparent to-transparent',
+    objectPos: '50% 50%',
+    stats: [
+      { value: '1.5T',    label: 'TGDI Engine' },
+      { value: '1,200 km', label: 'Combined Range' },
+      { value: '7 Seats', label: 'Premium Cabin' },
+    ],
+    cta: { primary: 'Inquire Now', secondary: 'Learn More', primaryHref: '/book-my-chery', secondaryHref: '/model/tiggo8' },
+  },
+  {
+    src: '/assets/tiggo7/one.webp',
     href: '/model/tiggo7',
     label: 'Chery Tiggo 7 PHEV',
     title: 'Chery Tiggo 7 PHEV',
     subtitle: 'C-Segment Smart Hybrid SUV',
+    textDark: false,
+    overlay: 'bg-gradient-to-r from-black/60 via-black/25 to-transparent',
+    overlayBottom: 'bg-gradient-to-t from-black/30 via-transparent to-transparent',
+    objectPos: '50% 50%',
     stats: [
-      { value: 'PHEV', label: 'Hybrid Technology' },
-      { value: 'L2', label: 'Driver Assist' },
-      { value: '5th Gen', label: 'Hybrid System' },
+      { value: '1.5T',    label: 'TGDI Engine' },
+      { value: '1,200 km', label: 'Combined Range' },
+      { value: '5 Seats', label: 'Premium Cabin' },
     ],
-  },
-  {
-    src: '/assets/tiggo8phev/hero.jpg',
-    href: '/chery-partnerships',
-    label: 'Financing',
-    title: 'Flexible Financing',
-    subtitle: 'Bank Partnerships',
-    stats: [
-      { value: 'Multiple', label: 'Partner Banks' },
-      { value: 'Islamic', label: '& Conventional' },
-      { value: 'Easy', label: 'Installments' },
-    ],
+    cta: { primary: 'Inquire Now', secondary: 'Learn More', primaryHref: '/book-my-chery', secondaryHref: '/model/tiggo7' },
   },
 ]
 
 export default function HeroCarousel() {
   const [active, setActive] = useState(0)
-  const [prev, setPrev] = useState<number | null>(null)
-  const [direction, setDirection] = useState<'next' | 'prev'>('next')
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null)
-
-  const goTo = (idx: number, dir: 'next' | 'prev' = 'next') => {
-    if (idx === active) return
-    setPrev(active)
-    setDirection(dir)
-    setActive(idx)
-  }
 
   const startTimer = () => {
     if (timerRef.current) clearInterval(timerRef.current)
     timerRef.current = setInterval(() => {
-      setActive(a => {
-        setPrev(a)
-        setDirection('next')
-        return (a + 1) % slides.length
-      })
+      setActive(a => (a + 1) % slides.length)
     }, INTERVAL)
   }
 
@@ -86,17 +77,23 @@ export default function HeroCarousel() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const handleNav = (idx: number, dir: 'next' | 'prev') => {
-    goTo(idx, dir)
+  const handleNav = (idx: number) => {
+    if (idx === active) return
+    setActive(idx)
     startTimer()
   }
 
   const slide = slides[active]
+  // financing slide gets special treatment: split layout
+  const isFinancing = slide.label === 'Financing'
 
   return (
-    <section className="relative w-full overflow-hidden bg-black" style={{ height: 'calc(100vh - 72px)', minHeight: 500, maxHeight: 900 }}>
+    <section
+      className="relative w-full overflow-hidden"
+      style={{ height: 'calc(100vh - 72px)', minHeight: 500, maxHeight: 900, background: isFinancing ? '#f0f4f8' : '#000' }}
+    >
 
-      {/* Slide images with crossfade */}
+      {/* Slide images */}
       {slides.map((s, i) => (
         <div
           key={i}
@@ -108,119 +105,102 @@ export default function HeroCarousel() {
             src={s.src}
             alt={s.title}
             className="w-full h-full object-cover"
-            style={{ objectPosition: '50% 50%' }}
+            style={{ objectPosition: s.objectPos }}
           />
-          {/* Dark gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/30 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+          {/* Directional overlay — light enough to keep image bright */}
+          {s.overlay && <div className={`absolute inset-0 ${s.overlay}`} />}
+          {s.overlayBottom && <div className={`absolute inset-0 ${s.overlayBottom}`} />}
+          {/* Financing: left solid panel so text is readable over white bg */}
+          {s.label === 'Financing' && (
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/90 via-[#0a1628]/60 to-transparent" />
+          )}
         </div>
       ))}
 
-      {/* Left section tracker - matches original exactly */}
-      <div className="absolute left-5 top-1/2 -translate-y-1/2 z-20 flex flex-col gap-3 hidden md:flex">
+      {/* Left side tracker */}
+      <div className="absolute left-5 top-1/2 -translate-y-1/2 z-20 flex-col gap-3 hidden md:flex">
         {slides.map((s, i) => (
-          <button
-            key={i}
-            onClick={() => handleNav(i, i > active ? 'next' : 'prev')}
-            className="group flex items-center gap-2"
-          >
-            <div
-              className={`transition-all duration-300 rounded-full ${
-                i === active
-                  ? 'w-[3px] h-8 bg-white'
-                  : 'w-[2px] h-4 bg-white/30 group-hover:bg-white/60'
-              }`}
-            />
-            <span className={`text-xs font-light transition-all duration-300 whitespace-nowrap ${
-              i === active ? 'text-white opacity-100 translate-x-0' : 'text-white/40 opacity-0 -translate-x-2 group-hover:opacity-60 group-hover:translate-x-0'
-            }`}>
-              {s.label}
-            </span>
+          <button key={i} onClick={() => handleNav(i)} className="group flex items-center gap-2">
+            <div className={`transition-all duration-300 rounded-full ${
+              i === active ? 'w-[3px] h-8 bg-white' : 'w-[2px] h-4 bg-white/40 group-hover:bg-white/70'
+            }`} />
+            <span className={`text-xs font-light transition-all duration-300 whitespace-nowrap drop-shadow ${
+              i === active ? 'text-white opacity-100 translate-x-0' : 'text-white/50 opacity-0 -translate-x-2 group-hover:opacity-70 group-hover:translate-x-0'
+            }`}>{s.label}</span>
           </button>
         ))}
       </div>
 
-      {/* Main content - left aligned like original */}
-      <div className="absolute inset-0 z-10 flex flex-col justify-end pb-16 md:pb-20 px-5 md:px-20">
-
-        {/* Title block with slide animation */}
-        <div className="mb-6" key={active}>
+      {/* Main text content */}
+      <div className="absolute inset-0 z-10 flex flex-col justify-end pb-20 md:pb-24 px-5 md:px-20">
+        <div key={`content-${active}`}>
           <p
-            className="text-white/60 text-sm font-light tracking-[0.2em] uppercase mb-3"
-            style={{ animation: 'slideUp 0.5s ease forwards' }}
+            className="text-white/80 text-sm font-light tracking-[0.2em] uppercase mb-3 drop-shadow"
+            style={{ animation: 'slideUp 0.45s ease both' }}
           >
             {slide.subtitle}
           </p>
           <h1
-            className="text-4xl md:text-6xl lg:text-7xl font-light text-white leading-tight"
-            style={{ animation: 'slideUp 0.5s ease 0.1s both' }}
+            className="text-4xl md:text-6xl lg:text-7xl font-light text-white leading-tight drop-shadow-lg"
+            style={{ animation: 'slideUp 0.45s ease 0.08s both' }}
           >
             {slide.title.split(' ').map((word, i) => (
-              <span key={i}>
-                {i === 0 ? <strong className="font-bold">{word}</strong> : ` ${word}`}
-              </span>
+              i === 0
+                ? <strong key={i} className="font-bold">{word} </strong>
+                : <span key={i}>{word} </span>
             ))}
           </h1>
         </div>
 
-        {/* Stats row - matches original */}
+        {/* Stats */}
         <div
-          className="flex gap-8 md:gap-12 mb-8"
           key={`stats-${active}`}
-          style={{ animation: 'slideUp 0.5s ease 0.2s both' }}
+          className="flex gap-8 md:gap-14 mt-6 mb-8"
+          style={{ animation: 'slideUp 0.45s ease 0.16s both' }}
         >
           {slide.stats.map((stat, i) => (
-            <div key={i} className={i > 0 ? 'border-l border-white/20 pl-8 md:pl-12' : ''}>
-              <p className="text-white text-lg md:text-2xl font-light">{stat.value}</p>
-              <p className="text-white/50 text-xs mt-1 tracking-wider uppercase">{stat.label}</p>
+            <div key={i} className={i > 0 ? 'border-l border-white/30 pl-8 md:pl-14' : ''}>
+              <p className="text-white text-xl md:text-2xl font-light drop-shadow">{stat.value}</p>
+              <p className="text-white/60 text-xs mt-1 tracking-wider uppercase">{stat.label}</p>
             </div>
           ))}
         </div>
 
-        {/* CTA buttons - matches original layout */}
+        {/* CTA */}
         <div
-          className="flex flex-col gap-3 w-fit"
           key={`cta-${active}`}
-          style={{ animation: 'slideUp 0.5s ease 0.3s both' }}
+          className="flex gap-3"
+          style={{ animation: 'slideUp 0.45s ease 0.24s both' }}
         >
-          <Link href="/book-my-chery">
-            <button className="w-48 h-12 bg-white text-black rounded-full text-sm font-medium hover:bg-gray-100 transition-colors">
-              Book Now
+          <Link href={slide.cta.primaryHref}>
+            <button className="h-12 px-7 bg-white text-black rounded-full text-sm font-medium hover:bg-gray-100 transition-colors shadow-lg">
+              {slide.cta.primary}
             </button>
           </Link>
-          <Link href="/test-drive">
-            <button className="w-48 h-12 border border-white text-white rounded-full text-sm font-light hover:bg-white/10 transition-colors">
-              Test Drive
+          <Link href={slide.cta.secondaryHref}>
+            <button className="h-12 px-7 border border-white text-white rounded-full text-sm font-light hover:bg-white/15 transition-colors">
+              {slide.cta.secondary}
             </button>
           </Link>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1 opacity-60">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5">
-            <polyline points="6 9 12 15 18 9" />
-          </svg>
         </div>
       </div>
 
-      {/* Bottom thumbnail strip - like original */}
+      {/* Progress bar + thumbnail strip */}
       <div className="absolute bottom-0 left-0 right-0 z-20">
-        {/* Progress bar for active slide */}
         <ProgressBar key={active} duration={INTERVAL} />
-
-        <div className="bg-black/40 backdrop-blur-sm px-5 md:px-20 py-3 hidden md:flex items-center gap-1">
+        <div className="bg-black/50 backdrop-blur-sm px-5 md:px-20 py-2 hidden md:flex items-center gap-1">
           {slides.map((s, i) => (
             <button
               key={i}
-              onClick={() => handleNav(i, i > active ? 'next' : 'prev')}
+              onClick={() => handleNav(i)}
               className={`relative flex-1 overflow-hidden rounded transition-all duration-300 ${
-                i === active ? 'opacity-100' : 'opacity-40 hover:opacity-65'
+                i === active ? 'opacity-100' : 'opacity-45 hover:opacity-70'
               }`}
             >
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={s.src} alt={s.label} className="w-full h-[52px] object-cover" />
+              <img src={s.src} alt={s.label} className="w-full h-[52px] object-cover" style={{ objectPosition: s.objectPos }} />
               <div className={`absolute inset-0 transition-colors duration-200 ${i === active ? 'ring-2 ring-white ring-inset' : ''}`} />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-2 py-1">
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent px-2 py-1">
                 <p className="text-white text-[10px] font-light truncate">{s.label}</p>
               </div>
             </button>
@@ -230,15 +210,15 @@ export default function HeroCarousel() {
 
       {/* Arrow buttons */}
       <button
-        onClick={() => handleNav((active - 1 + slides.length) % slides.length, 'prev')}
-        className="absolute left-4 md:left-12 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border border-white/30 bg-black/20 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white/20 transition hidden md:flex"
+        onClick={() => handleNav((active - 1 + slides.length) % slides.length)}
+        className="absolute left-12 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border border-white/40 bg-black/20 backdrop-blur-sm text-white items-center justify-center hover:bg-white/20 transition hidden md:flex"
         aria-label="Previous"
       >
         <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="10 15 5 9 10 3"/></svg>
       </button>
       <button
-        onClick={() => handleNav((active + 1) % slides.length, 'next')}
-        className="absolute right-4 md:right-12 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border border-white/30 bg-black/20 backdrop-blur-sm text-white flex items-center justify-center hover:bg-white/20 transition hidden md:flex"
+        onClick={() => handleNav((active + 1) % slides.length)}
+        className="absolute right-12 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full border border-white/40 bg-black/20 backdrop-blur-sm text-white items-center justify-center hover:bg-white/20 transition hidden md:flex"
         aria-label="Next"
       >
         <svg width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="6 3 11 9 6 15"/></svg>
@@ -247,7 +227,7 @@ export default function HeroCarousel() {
       {/* Mobile dots */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2 md:hidden">
         {slides.map((_, i) => (
-          <button key={i} onClick={() => handleNav(i, i > active ? 'next' : 'prev')}
+          <button key={i} onClick={() => handleNav(i)}
             className={`rounded-full transition-all duration-300 ${i === active ? 'w-6 h-2 bg-white' : 'w-2 h-2 bg-white/40'}`}
           />
         ))}
@@ -255,7 +235,7 @@ export default function HeroCarousel() {
 
       <style>{`
         @keyframes slideUp {
-          from { opacity: 0; transform: translateY(20px); }
+          from { opacity: 0; transform: translateY(18px); }
           to   { opacity: 1; transform: translateY(0); }
         }
       `}</style>
@@ -277,7 +257,7 @@ function ProgressBar({ duration }: { duration: number }) {
     return () => cancelAnimationFrame(frame)
   }, [duration])
   return (
-    <div className="h-[2px] bg-white/10">
+    <div className="h-[2px] bg-white/15">
       <div className="h-full bg-white transition-none" style={{ width: `${width}%` }} />
     </div>
   )

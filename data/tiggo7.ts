@@ -22,10 +22,16 @@ export const tiggo7Specs = [
 ]
 
 export const tiggo7CapabilityFeatures = [
-  { title: 'PHEV Powertrain',    desc: '5th generation plug-in hybrid system for maximum efficiency.' },
-  { title: 'L2 Driver Assist',   desc: 'Full suite of L2 autonomous driving assistance systems.' },
-  { title: 'Smart Connectivity', desc: 'Qualcomm-powered infotainment with OTA updates.' },
-  { title: 'Spacious Cabin',     desc: 'C-Segment packaging with generous interior room for 5.' },
+  { title: 'DHE Hybrid Engine',  desc: '5th generation plug-in hybrid DHE engine for maximum efficiency.', img: '/assets/tiggo7/DHE-1024x715.webp' },
+  { title: 'DHT Transmission',   desc: 'Dedicated Hybrid Transmission delivering seamless power transfer.', img: '/assets/tiggo7/DHT-1024x715.webp' },
+  { title: 'Dual Screen Cockpit',desc: 'Qualcomm-powered dual-screen infotainment with OTA updates.', img: '/assets/tiggo7/dualscreen.webp' },
+  { title: 'Wireless Charging',  desc: 'Convenient wireless charging pad for compatible devices.', img: '/assets/tiggo7/wirlesscharger.webp' },
+]
+
+export const tiggo7InteriorImages = [
+  { src: '/assets/tiggo7/Slide-12-front-row-seats-scaled.webp', alt: 'Tiggo 7 Front Row Seats' },
+  { src: '/assets/tiggo7/dualscreen.webp',                       alt: 'Tiggo 7 Dual Screen' },
+  { src: '/assets/tiggo7/speakers-1.webp',                       alt: 'Tiggo 7 Premium Audio' },
 ]
 
 export const tiggo7HatchStats = [

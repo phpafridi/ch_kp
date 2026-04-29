@@ -27,10 +27,16 @@ export const tiggo8BatterySpecs = [
 ]
 
 export const tiggo8ExteriorFeatures = [
-  { title: 'LED Matrix Headlights',   desc: 'Signature Chery LED lighting with adaptive beam control.' },
-  { title: 'Panoramic Sunroof',       desc: 'Large panoramic glass roof for an open, airy cabin feel.' },
-  { title: '20" Alloy Wheels',        desc: 'Sport alloy wheels with all-season performance tyres.' },
-  { title: 'Flush Door Handles',      desc: 'Aerodynamic flush door handles for a sleek profile.' },
+  { label: 'LED Headlights',   img: '/assets/tiggo8/headlight-1024x576.jpg',              desc: 'Signature Chery LED lighting with adaptive beam control.' },
+  { label: 'Number Plate',     img: '/assets/tiggo8/Website-Banner-Black-Number-Plate.jpg', desc: 'Bold black number plate styling that commands attention.' },
+  { label: 'Reverse Camera',   img: '/assets/tiggo8/reverse-1024x576.jpg',                desc: 'Wide-angle reverse camera with parking guidelines.' },
+  { label: 'Lane Keep Assist', img: '/assets/tiggo8/lanekeeping-1024x576.jpg',             desc: 'Intelligent lane-keep assist keeps you safely on track.' },
+]
+
+export const tiggo8InteriorImages = [
+  { src: '/assets/tiggo8/15.6-Inch-Display.jpg', alt: 'Tiggo 8 15.6 Inch Display' },
+  { src: '/assets/tiggo8/audio.webp',             alt: 'Tiggo 8 Premium Audio' },
+  { src: '/assets/tiggo8/wirlesscharger.jpg',     alt: 'Tiggo 8 Wireless Charger' },
 ]
 
 export const tiggo8InteriorFeatures = [

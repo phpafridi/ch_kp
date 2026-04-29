@@ -15,6 +15,12 @@ export const tiggo8phevHeroStats = [
   { value: '90 KM',       label: 'Pure EV Range' },
 ]
 
+export const tiggo8phevSafetyStats = [
+  { value: '10',     label: 'Safety Airbags' },
+  { value: 'L2',     label: 'Driver Assist Level' },
+  { value: '11',     label: 'Assist Scenarios' },
+]
+
 export const tiggo8phevBatterySpecs = [
   { key: 'Battery Type',       value: 'LFP Battery' },
   { key: 'Pure EV Range',      value: '90 km' },
@@ -22,15 +28,22 @@ export const tiggo8phevBatterySpecs = [
   { key: 'Combined Power',     value: '496 hp / 735 Nm' },
 ]
 
-export const tiggo8phevDriverAssist = [
-  { img: '/assets/mg-pilot-imgs/tja.webp',  code: 'TJA',  name: 'Traffic Congestion Assist' },
-  { img: '/assets/mg-pilot-imgs/acc.webp',  code: 'ACC',  name: 'Adaptive Cruise Control' },
-  { img: '/assets/mg-pilot-imgs/aeb.webp',  code: 'AEB',  name: 'Auto Emergency Braking' },
-  { img: '/assets/mg-pilot-imgs/lka.webp',  code: 'LKA',  name: 'Lane Keeping Assist' },
-  { img: '/assets/mg-pilot-imgs/bsm.webp',  code: 'BSD',  name: 'Blind Spot Detection' },
-  { img: '/assets/mg-pilot-imgs/ihbc.webp', code: 'IHC',  name: 'Intelligent High Beam' },
-  { img: '/assets/mg-pilot-imgs/rta.webp',  code: 'RCTA', name: 'Rear Cross Traffic Alert' },
-  { img: '/assets/mg-pilot-imgs/sas.webp',  code: 'DOW',  name: 'Door Opening Warning' },
+// Icon-based, no MG images
+export const tiggo8phevPilotFeatures = [
+  { code: 'TJA',  name: 'Traffic Congestion Assist',   icon: '🚗' },
+  { code: 'ACC',  name: 'Adaptive Cruise Control',      icon: '⚡' },
+  { code: 'AEB',  name: 'Auto Emergency Braking',       icon: '🛑' },
+  { code: 'LKA',  name: 'Lane Keeping Assist',          icon: '↔️' },
+  { code: 'BSD',  name: 'Blind Spot Detection',         icon: '👁️' },
+  { code: 'IHC',  name: 'Intelligent High Beam',        icon: '💡' },
+  { code: 'RCTA', name: 'Rear Cross Traffic Alert',     icon: '↩️' },
+  { code: 'DOW',  name: 'Door Opening Warning',         icon: '🚪' },
+]
+
+export const tiggo8phevDesignFeatures = [
+  { title: 'Star Matrix Grille',  subtitle: 'Chery\'s signature front identity — sharp, bold, unmistakable.' },
+  { title: 'LED Matrix Lights',   subtitle: 'Adaptive headlights that read the road ahead.' },
+  { title: '20" Alloy Wheels',    subtitle: 'Sport alloys tuned for comfort and performance.' },
 ]
 
 export const tiggo8phevComfortFeatures = [
@@ -46,6 +59,19 @@ export const tiggo8phevComfortFeatures = [
   '540° Bird Eye View Camera',
 ]
 
+export const tiggo8phevInteriorImages = [
+  { src: '/assets/tiggo8/15.6-Inch-Display.jpg', alt: 'Tiggo 8 15.6 Inch Display' },
+  { src: '/assets/tiggo8/audio.webp',             alt: 'Tiggo 8 Premium Audio' },
+  { src: '/assets/tiggo8/wirlesscharger.jpg',     alt: 'Tiggo 8 Wireless Charger' },
+]
+
+export const tiggo8phevExteriorImages = [
+  { src: '/assets/tiggo8/newtigo8.webp',             alt: 'Tiggo 8 PHEV Front' },
+  { src: '/assets/tiggo8/headlight-1024x576.jpg',    alt: 'Tiggo 8 LED Headlights' },
+  { src: '/assets/tiggo8/Website-Banner-Black-Number-Plate.jpg', alt: 'Tiggo 8 Side' },
+  { src: '/assets/tiggo8/reverse-1024x576.jpg',      alt: 'Tiggo 8 Rear' },
+]
+
 export const tiggo8phevSpecs = [
   ['Engine',              '1.5T TGDI + 5th Gen DHT Hybrid'],
   ['Combined Power',      '496 hp / 735 Nm'],
@@ -58,34 +84,4 @@ export const tiggo8phevSpecs = [
   ['Safety Airbags',      '10'],
   ['V2L Power',           '3.3 kW Vehicle to Load'],
   ['Ex-Factory Price',    'PKR 10,999,000/-'],
-  ['Warranty',            'Chery Warranty Coverage'],
-]
-
-export const tiggo8phevSafetyStats = [
-  { value: '10',      label: 'Airbags' },
-  { value: '540°',    label: 'Bird Eye View' },
-  { value: 'L2',      label: 'Driver Assist' },
-  { value: 'AEB',     label: 'Auto Emergency Braking' },
-  { value: 'BSD',     label: 'Blind Spot Detection' },
-  { value: 'LKA',     label: 'Lane Keep Assist' },
-]
-
-export const tiggo8phevPilotFeatures = [
-  { img: '/assets/mg-pilot-imgs/tja.webp',  code: 'TJA',  name: 'Traffic Jam Assist' },
-  { img: '/assets/mg-pilot-imgs/acc.webp',  code: 'ACC',  name: 'Adaptive Cruise Control' },
-  { img: '/assets/mg-pilot-imgs/aeb.webp',  code: 'AEB',  name: 'Auto Emergency Braking' },
-  { img: '/assets/mg-pilot-imgs/lka.webp',  code: 'LKA',  name: 'Lane Keeping Assist' },
-  { img: '/assets/mg-pilot-imgs/bsm.webp',  code: 'BSD',  name: 'Blind Spot Detection' },
-  { img: '/assets/mg-pilot-imgs/ihbc.webp', code: 'IHC',  name: 'Intelligent High Beam' },
-  { img: '/assets/mg-pilot-imgs/rta.webp',  code: 'RCTA', name: 'Rear Cross Traffic Alert' },
-  { img: '/assets/mg-pilot-imgs/sas.webp',  code: 'DOW',  name: 'Door Opening Warning' },
-]
-
-export const tiggo8phevDesignFeatures = [
-  { title: 'Stargazer Panoramic Sunroof',  desc: 'Voice-activated panoramic glass roof spanning the full cabin.' },
-  { title: 'Frameless Flush Door Handles', desc: 'Aerodynamic flush handles that extend on approach.' },
-  { title: '20" Alloy Wheels',             desc: 'Multi-spoke alloy wheels with low-rolling-resistance tyres.' },
-  { title: 'LED Matrix Headlights',        desc: 'Adaptive matrix LED with automatic high-beam control.' },
-  { title: 'Dual-tone Exterior',           desc: 'Premium two-tone paint finish with contrasting roof.' },
-  { title: 'D-SUV Dimensions',             desc: '4785mm length — full D-Segment presence on the road.' },
 ]

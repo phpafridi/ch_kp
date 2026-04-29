@@ -3,34 +3,34 @@ import Link from 'next/link'
 import SectionTracker from '@/components/ui/SectionTracker'
 import ScrollReveal from '@/components/ui/ScrollReveal'
 import {
-  tiggo9Sections, tiggo9HeroStats, tiggo9DesignImages,
+  tiggo9Sections, tiggo9HeroStats, tiggo9DesignImages, tiggo9InteriorImages,
   tiggo9DesignQuote, tiggo9PerfStats, tiggo9InteriorFeatures,
   tiggo9ElectricSpecs, tiggo9Specs,
 } from '@/data/tiggo9'
 
 export const metadata: Metadata = {
-  title: 'Chery Tiggo 9 PHEV – 100% Electric Roadster | Chery KP',
-  description: '375kW, 0-100 in 3.2 seconds, 507km range. The Chery Tiggo 9 PHEV — an all-electric British roadster.',
+  title: 'Chery Tiggo 9 PHEV – E-Segment Premium SUV | Chery KP',
+  description: '5th Gen PHEV, 1200 km combined range, 7 seats, premium E-Segment SUV. Chery Tiggo 9 PHEV — Coming Soon.',
 }
 
-export default function CybersterPage() {
+export default function Tiggo9Page() {
   return (
     <div className="bg-black">
       <SectionTracker sections={tiggo9Sections} />
 
       {/* HERO */}
-      <section id="hero" className="relative overflow-hidden" style={{minHeight:'92vh'}}>
-        <img src="/assets/MG_tiggo9_Desk_HeroHeader.webp" alt="Chery Tiggo 9 PHEV"
-          className="w-full h-full object-cover absolute inset-0 opacity-90" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+      <section id="hero" className="relative overflow-hidden" style={{minHeight:'92vh', background:'#e8ede8'}}>
+        <img src="/assets/tiggo9/hero.jpg" alt="Chery Tiggo 9 PHEV"
+          className="w-full h-full object-cover absolute inset-0" style={{objectPosition:'50% 45%'}} />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
         <div className="relative z-10 flex gap-3 px-8 md:pl-20 md:pr-16 pt-6">
           <Link href="/pre-qualify"><button className="h-10 px-5 border border-white/60 rounded-full text-white text-sm hover:bg-white/10 transition">Pre-Qualify</button></Link>
           <Link href="/book-my-chery"><button className="h-10 px-5 bg-white text-black rounded-full text-sm font-medium hover:bg-gray-100 transition">Book Now</button></Link>
         </div>
         <div className="relative z-10 flex flex-col justify-end h-full pb-20 px-8 md:pl-20 md:pr-16" style={{minHeight:'85vh'}}>
-          <p className="text-white/60 text-sm tracking-widest uppercase mb-2">100% Electric Roadster</p>
-          <h1 className="text-5xl md:text-7xl font-light text-white mb-6 leading-tight"><strong className="font-bold">Chery</strong> Cyberster</h1>
+          <p className="text-white/60 text-sm tracking-widest uppercase mb-2">E-Segment Premium Luxury SUV</p>
+          <h1 className="text-5xl md:text-7xl font-light text-white mb-6 leading-tight"><strong className="font-bold">Chery</strong> Tiggo 9 PHEV</h1>
           <div className="flex gap-8 md:gap-16 mb-10">
             {tiggo9HeroStats.map((s,i)=>(
               <div key={i} className={i>0?'border-l border-white/20 pl-8 md:pl-16':''}>
@@ -59,7 +59,7 @@ export default function CybersterPage() {
           <ScrollReveal animation="fade-up" delay={100}>
             <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
               <p className="text-base md:text-lg font-light text-gray-600 text-justify leading-relaxed">
-                Blending Chery's fifth-generation PHEV technology with premium E-Segment design. The Tiggo 9 isn't just any SUV — it's a statement of sophisticated power and innovation.
+                Blending Chery&apos;s fifth-generation PHEV technology with premium E-Segment design. The Tiggo 9 isn&apos;t just any SUV — it&apos;s a statement of sophisticated power and innovation.
               </p>
               <blockquote className="border-l-4 border-black pl-6">
                 <p className="text-lg md:text-xl font-light text-gray-700 italic leading-relaxed">&ldquo;{tiggo9DesignQuote.text}&rdquo;</p>
@@ -83,9 +83,9 @@ export default function CybersterPage() {
           <ScrollReveal animation="fade-up">
             <span className="text-xs tracking-[0.2em] text-[#ADADAD] font-medium uppercase">Performance</span>
             <h2 className="text-4xl md:text-6xl font-light mt-3 mb-6 text-white">Thrill of the<br /><strong className="font-bold">Open Road</strong></h2>
-            <p className="text-base md:text-lg font-light text-white/70 max-w-2xl text-justify leading-relaxed mb-16">Uncompromising Power and Performance, the Cyberster defines what it means to drive an Electric Roadster. With dual-motor all-wheel drive and lightning-fast response, every journey is electrifying.</p>
+            <p className="text-base md:text-lg font-light text-white/70 max-w-2xl text-justify leading-relaxed mb-16">The Tiggo 9 PHEV marries fifth-generation hybrid engineering with E-Segment luxury. Dual powertrains, 1,200 km of combined range, and premium comfort for every occupant.</p>
           </ScrollReveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-3 gap-6 mb-12">
             {tiggo9PerfStats.map((s,i)=>(
               <ScrollReveal key={s.label} animation="fade-up" delay={i*80}>
                 <div className="border border-white/10 rounded-2xl p-6 text-center">
@@ -96,7 +96,7 @@ export default function CybersterPage() {
             ))}
           </div>
           <ScrollReveal animation="scale-up" delay={100}>
-            <img src="/assets/MG_tiggo9_Desk_HeroHeader.webp" alt="Cyberster Performance"
+            <img src="/assets/tiggo9/second9.webp" alt="Tiggo 9 Performance"
               className="w-full rounded-2xl object-cover h-[280px] md:h-[480px]" />
           </ScrollReveal>
         </div>
@@ -108,24 +108,25 @@ export default function CybersterPage() {
           <ScrollReveal animation="fade-up">
             <span className="text-xs tracking-[0.2em] text-[#ADADAD] font-medium uppercase">Interior</span>
             <h2 className="text-4xl md:text-5xl font-light mt-3 mb-6">Stunning Inside and Out</h2>
-            <p className="text-base md:text-lg font-light text-gray-600 max-w-2xl text-justify leading-relaxed mb-10">Redefine Your Standard with Interiors that Blend Pulse-Racing Design with the Smartest Tech. Ordinary? Never Heard of it.</p>
+            <p className="text-base md:text-lg font-light text-gray-600 max-w-2xl text-justify leading-relaxed mb-10">A cabin that redefines luxury. Every surface, every material, every technology choice reflects the Tiggo 9&apos;s commitment to the premium experience.</p>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-8">
-            {tiggo9InteriorFeatures.map((f,i)=>(
-              <ScrollReveal key={f.title} animation="fade-up" delay={i*100}>
-                <div className="bg-[#F7F7F7] rounded-2xl p-7">
-                  <h3 className="text-lg font-medium mb-2">{f.title}</h3>
-                  <p className="text-sm text-gray-500 font-light leading-relaxed">{f.desc}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
+          <ScrollReveal animation="fade-right">
+            <ul className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10">
+              {tiggo9InteriorFeatures.map((f)=>(
+                <li key={f} className="bg-[#F7F7F7] rounded-2xl px-4 py-4 flex items-center gap-2 text-sm text-gray-700">
+                  <span className="w-1.5 h-1.5 rounded-full bg-black flex-shrink-0" />{f}
+                </li>
+              ))}
+            </ul>
+          </ScrollReveal>
           <ScrollReveal animation="scale-up" delay={100}>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {tiggo9DesignImages.map((img,i)=>(
-                <img key={i} src={img.src} alt={img.alt}
-                  className={`w-full rounded-2xl object-cover h-48 md:h-64 ${i===2?'hidden md:block':''}`} />
-              ))}
+              <img src={tiggo9InteriorImages[0].src} alt={tiggo9InteriorImages[0].alt}
+                className="w-full rounded-2xl object-cover h-48 md:h-64 col-span-2 md:col-span-1" />
+              <img src={tiggo9InteriorImages[1].src} alt={tiggo9InteriorImages[1].alt}
+                className="w-full rounded-2xl object-cover h-48 md:h-64" />
+              <img src={tiggo9InteriorImages[2].src} alt={tiggo9InteriorImages[2].alt}
+                className="w-full rounded-2xl object-cover h-48 md:h-64" />
             </div>
           </ScrollReveal>
         </div>
@@ -135,9 +136,9 @@ export default function CybersterPage() {
       <section id="electric" className="py-20 px-8 md:pl-20 md:pr-16 bg-[#F7F7F7]">
         <div className="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-16 items-center">
           <ScrollReveal animation="fade-right">
-            <span className="text-xs tracking-[0.2em] text-[#ADADAD] font-medium uppercase">Electric</span>
+            <span className="text-xs tracking-[0.2em] text-[#ADADAD] font-medium uppercase">PHEV System</span>
             <h2 className="text-4xl md:text-5xl font-light mt-3 mb-6">Charge Forward</h2>
-            <p className="text-base md:text-lg font-light text-gray-600 text-justify leading-relaxed mb-8">The Cyberster&apos;s advanced battery technology delivers exceptional range with fast charging capability. From 10% to 80% in just 38 minutes with a 150kW DC fast charger.</p>
+            <p className="text-base md:text-lg font-light text-gray-600 text-justify leading-relaxed mb-8">The Tiggo 9 PHEV&apos;s advanced 5th-generation hybrid system delivers 1,200 km of combined range, LFP high-performance battery, and seamless dual-power delivery.</p>
             <div className="space-y-4">
               {tiggo9ElectricSpecs.map(({key,value})=>(
                 <div key={key} className="flex justify-between border-b border-gray-200 pb-3">
@@ -149,13 +150,12 @@ export default function CybersterPage() {
           </ScrollReveal>
           <ScrollReveal animation="fade-left" delay={150}>
             <div className="bg-[#181818] rounded-3xl p-10 text-center">
-              <p className="text-[80px] font-light text-white leading-none">507</p>
+              <p className="text-[80px] font-light text-white leading-none">1200</p>
               <p className="text-2xl font-light text-white/80 mt-1">km Range</p>
-              <p className="text-sm text-white/40 mt-2">Dual Motor — WLTP</p>
+              <p className="text-sm text-white/40 mt-2">5th Gen PHEV — Combined</p>
               <div className="mt-8 w-full bg-white/10 rounded-full h-2">
-                <div className="bg-[#29C5E8] h-2 rounded-full" style={{width:'88%'}} />
+                <div className="bg-[#29C5E8] h-2 rounded-full" style={{width:'92%'}} />
               </div>
-              <p className="text-xs text-white/30 mt-2">vs 576 km max possible</p>
             </div>
           </ScrollReveal>
         </div>
@@ -174,14 +174,6 @@ export default function CybersterPage() {
                   <span className="text-sm font-medium text-right max-w-[55%]">{v}</span>
                 </div>
               ))}
-            </div>
-          </ScrollReveal>
-          <ScrollReveal animation="fade-up" delay={100}>
-            <div className="mt-8">
-              <a href="/assets/brochure/Chery-Tiggo9-Brochure.pdf" target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 border border-black text-black text-sm font-medium px-6 py-3 rounded-full hover:bg-black hover:text-white transition">
-                Download Brochure
-              </a>
             </div>
           </ScrollReveal>
         </div>

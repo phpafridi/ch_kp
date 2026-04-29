@@ -4,34 +4,33 @@ import SectionTracker from '@/components/ui/SectionTracker'
 import ScrollReveal from '@/components/ui/ScrollReveal'
 import {
   tiggo7Sections, tiggo7HeroStats, tiggo7CapabilityFeatures,
-  tiggo7HatchStats, tiggo7SafetyFeatures, tiggo7ComfortFeatures, tiggo7Specs,
+  tiggo7HatchStats, tiggo7SafetyFeatures, tiggo7ComfortFeatures,
+  tiggo7InteriorImages, tiggo7Specs,
 } from '@/data/tiggo7'
 
 export const metadata: Metadata = {
-  title: 'Chery Tiggo 7 PHEV – True Luxury Off-Roader | Chery KP',
-  description: '2.5L Turbo Diesel, Intelligent 4×4, Smart Hatch. Chery Tiggo 7 PHEV — starting from PKR 22,749,000.',
+  title: 'Chery Tiggo 7 PHEV – C-Segment Smart Hybrid SUV | Chery KP',
+  description: '5th Generation PHEV System, L2 Driver Assist, Qualcomm Infotainment. Chery Tiggo 7 PHEV — Coming Soon.',
 }
 
-export default function MGU9Page() {
+export default function Tiggo7Page() {
   return (
     <div className="bg-white">
       <SectionTracker sections={tiggo7Sections} />
 
       {/* HERO */}
       <section id="hero" className="relative bg-black overflow-hidden" style={{minHeight:'92vh'}}>
-        <img src="/assets/tiggo7/tiggo7-index.png" alt="Chery Tiggo 7 PHEV"
-          className="w-full h-full object-cover absolute inset-0 opacity-80" style={{objectPosition:'50% 40%'}} />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <img src="/assets/tiggo7/tiggo7banner.webp" alt="Chery Tiggo 7 PHEV"
+          className="w-full h-full object-cover absolute inset-0" style={{objectPosition:'50% 45%'}} />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
         <div className="relative z-10 flex gap-3 px-8 md:pl-20 md:pr-16 pt-6">
-          <a href="/assets/mg-u9/u9-flyer.pdf" target="_blank" rel="noopener noreferrer">
-            <button className="h-10 px-5 border border-white/60 rounded-full text-white text-sm hover:bg-white/10 transition">Owner&apos;s Manual</button>
-          </a>
+          <Link href="/test-drive"><button className="h-10 px-5 border border-white/60 rounded-full text-white text-sm hover:bg-white/10 transition">Test Drive</button></Link>
           <Link href="/book-my-chery"><button className="h-10 px-5 bg-white text-black rounded-full text-sm font-medium hover:bg-gray-100 transition">Book Now</button></Link>
         </div>
         <div className="relative z-10 flex flex-col justify-end h-full pb-20 px-8 md:pl-20 md:pr-16" style={{minHeight:'85vh'}}>
-          <p className="text-white/60 text-sm tracking-widest uppercase mb-2">True Luxury Off-Roader</p>
-          <h1 className="text-5xl md:text-7xl font-light text-white mb-6 leading-tight"><strong className="font-bold">Chery</strong> U9</h1>
+          <p className="text-white/60 text-sm tracking-widest uppercase mb-2">C-Segment Smart Hybrid SUV</p>
+          <h1 className="text-5xl md:text-7xl font-light text-white mb-6 leading-tight"><strong className="font-bold">Chery</strong> Tiggo 7 PHEV</h1>
           <div className="flex gap-8 md:gap-16 mb-10">
             {tiggo7HeroStats.map((s,i)=>(
               <div key={i} className={i>0?'border-l border-white/20 pl-8 md:pl-16':''}>
@@ -55,13 +54,14 @@ export default function MGU9Page() {
         <div className="max-w-[1200px] mx-auto">
           <ScrollReveal animation="fade-up">
             <span className="text-xs tracking-[0.2em] text-[#ADADAD] font-medium uppercase">Capability</span>
-            <h2 className="text-4xl md:text-6xl font-light mt-3 mb-6"><strong className="font-bold">Made</strong> for Every Journey</h2>
-            <p className="text-base md:text-lg font-light text-gray-600 max-w-2xl text-justify leading-relaxed mb-12">Whether you&apos;re hauling, exploring or commuting, the Chery Tiggo 7 PHEV&apos;s 2.5-litre turbo-diesel engine and Intelligent 4×4 System ensures steady power and confidence on all kinds of Pakistani terrain.</p>
+            <h2 className="text-4xl md:text-6xl font-light mt-3 mb-6"><strong className="font-bold">Built</strong> for Every Journey</h2>
+            <p className="text-base md:text-lg font-light text-gray-600 max-w-2xl text-justify leading-relaxed mb-12">Whether you&apos;re commuting, exploring or hauling, the Chery Tiggo 7 PHEV&apos;s 5th-generation hybrid system and L2 Driver Assist ensure steady power and confidence on all kinds of Pakistani terrain.</p>
           </ScrollReveal>
           <ScrollReveal animation="scale-up" delay={100}>
-            <img src="/assets/tiggo7/tiggo7-index.png" alt="Chery Tiggo 7 PHEV Capability" className="w-full rounded-2xl object-cover h-[320px] md:h-[520px] mb-12" />
+            <img src="/assets/tiggo7/one.webp" alt="Chery Tiggo 7 PHEV"
+              className="w-full rounded-2xl object-cover h-[320px] md:h-[520px] mb-12" />
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {tiggo7CapabilityFeatures.map((item,i)=>(
               <ScrollReveal key={item.title} animation="fade-up" delay={i*100}>
                 <div className="bg-[#F7F7F7] rounded-2xl overflow-hidden">
@@ -77,19 +77,36 @@ export default function MGU9Page() {
         </div>
       </section>
 
-      {/* SMART HATCH */}
+      {/* EXTERIOR GALLERY */}
       <section id="smart-hatch" className="py-20 px-8 md:pl-20 md:pr-16 bg-[#181818]">
         <div className="max-w-[1200px] mx-auto">
           <ScrollReveal animation="fade-up">
-            <span className="text-xs tracking-[0.2em] text-[#ADADAD] font-medium uppercase">Smart Hatch</span>
-            <h2 className="text-4xl md:text-6xl font-light mt-3 mb-6 text-white">Unlock <strong className="font-bold">1,600L</strong> of Space</h2>
-            <p className="text-base md:text-lg font-light text-white/70 max-w-2xl text-justify leading-relaxed mb-12">Unlock up to 1,600L of space and carry cargo up to 2.4m long with the Smart Hatch Midgate — seamlessly connecting the cabin to the tub to create one continuous space for oversized gear.</p>
+            <span className="text-xs tracking-[0.2em] text-[#ADADAD] font-medium uppercase">Design</span>
+            <h2 className="text-4xl md:text-6xl font-light mt-3 mb-6 text-white">Sculpted for the <strong className="font-bold">Road Ahead</strong></h2>
+            <p className="text-base md:text-lg font-light text-white/70 max-w-2xl text-justify leading-relaxed mb-12">Every angle of the Tiggo 7 PHEV is shaped with purpose — aerodynamic confidence, bold presence, and intelligent design that turns heads and cuts through air.</p>
           </ScrollReveal>
-          <ScrollReveal animation="scale-up" delay={100}>
-            <img src="/assets/mg-u9/smart-hatch/inpage-hatch.jpg" alt="Smart Hatch"
-              className="w-full rounded-2xl object-cover h-[280px] md:h-[480px]"
-              />
-          </ScrollReveal>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            <ScrollReveal animation="scale-up" delay={0}>
+              <img src="/assets/tiggo7/colorblack-1536x864.webp" alt="Tiggo 7 Black"
+                className="rounded-2xl object-cover w-full h-48 md:h-64 col-span-2 md:col-span-2" />
+            </ScrollReveal>
+            <ScrollReveal animation="scale-up" delay={80}>
+              <img src="/assets/tiggo7/lastbanner.webp" alt="Tiggo 7 Rear"
+                className="rounded-2xl object-cover w-full h-48 md:h-64" />
+            </ScrollReveal>
+            <ScrollReveal animation="scale-up" delay={120}>
+              <img src="/assets/tiggo7/four.webp" alt="Tiggo 7 Detail"
+                className="rounded-2xl object-cover w-full h-40 md:h-48" />
+            </ScrollReveal>
+            <ScrollReveal animation="scale-up" delay={160}>
+              <img src="/assets/tiggo7/six.webp" alt="Tiggo 7 Side"
+                className="rounded-2xl object-cover w-full h-40 md:h-48" />
+            </ScrollReveal>
+            <ScrollReveal animation="scale-up" delay={200}>
+              <img src="/assets/tiggo7/eight.webp" alt="Tiggo 7 Wheel"
+                className="rounded-2xl object-cover w-full h-40 md:h-48" />
+            </ScrollReveal>
+          </div>
           <div className="grid grid-cols-3 gap-6 mt-10 text-center">
             {tiggo7HatchStats.map((s,i)=>(
               <ScrollReveal key={s.label} animation="fade-up" delay={i*100}>
@@ -109,15 +126,13 @@ export default function MGU9Page() {
           <ScrollReveal animation="fade-up">
             <span className="text-xs tracking-[0.2em] text-[#ADADAD] font-medium uppercase">Safety</span>
             <h2 className="text-4xl md:text-5xl font-light mt-3 mb-6">Built Around Protection</h2>
-            <p className="text-base md:text-lg font-light text-gray-600 max-w-2xl text-justify leading-relaxed mb-10">The Chery Tiggo 7 PHEV features advanced Chery Driver Assist safety systems, multiple airbags, and a robust body structure engineered to protect in every scenario.</p>
+            <p className="text-base md:text-lg font-light text-gray-600 max-w-2xl text-justify leading-relaxed mb-10">The Chery Tiggo 7 PHEV features advanced L2 Chery Driver Assist safety systems, multiple airbags, and a robust body structure engineered to protect in every scenario.</p>
           </ScrollReveal>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {tiggo7SafetyFeatures.map((f,i)=>(
-              <ScrollReveal key={f.code} animation="fade-up" delay={i*80}>
-                <div className="bg-[#F7F7F7] rounded-2xl p-4 text-center hover:shadow-md transition-shadow">
-                  <img src={f.img} alt={f.name} className="w-full h-20 object-contain mb-3" />
-                  <p className="text-xs font-bold tracking-widest">{f.code}</p>
-                  <p className="text-[11px] text-gray-500 mt-1 leading-tight">{f.name}</p>
+              <ScrollReveal key={f} animation="fade-up" delay={i*80}>
+                <div className="bg-[#F7F7F7] rounded-2xl p-5 text-center hover:shadow-md transition-shadow">
+                  <p className="text-sm font-medium text-gray-800">{f}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -125,7 +140,7 @@ export default function MGU9Page() {
         </div>
       </section>
 
-      {/* COMFORT */}
+      {/* COMFORT / INTERIOR */}
       <section id="comfort" className="py-20 px-8 md:pl-20 md:pr-16 bg-[#F7F7F7]">
         <div className="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-16 items-center">
           <ScrollReveal animation="fade-right">
@@ -142,9 +157,9 @@ export default function MGU9Page() {
           </ScrollReveal>
           <ScrollReveal animation="fade-left" delay={150}>
             <div className="grid grid-cols-2 gap-3">
-              <img src="/assets/Interior1.png" alt="Interior" className="rounded-2xl object-cover h-44 w-full col-span-2" />
-              <img src="/assets/Interior2.png" alt="Interior 2" className="rounded-2xl object-cover h-36 w-full" />
-              <img src="/assets/Interior3.png" alt="Interior 3" className="rounded-2xl object-cover h-36 w-full" />
+              <img src={tiggo7InteriorImages[0].src} alt={tiggo7InteriorImages[0].alt} className="rounded-2xl object-cover h-44 w-full col-span-2" />
+              <img src={tiggo7InteriorImages[1].src} alt={tiggo7InteriorImages[1].alt} className="rounded-2xl object-cover h-36 w-full" />
+              <img src={tiggo7InteriorImages[2].src} alt={tiggo7InteriorImages[2].alt} className="rounded-2xl object-cover h-36 w-full" />
             </div>
           </ScrollReveal>
         </div>

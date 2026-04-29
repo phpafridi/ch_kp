@@ -5,12 +5,13 @@ import ScrollReveal from '@/components/ui/ScrollReveal'
 import {
   tiggo8phevSections, tiggo8phevHeroStats, tiggo8phevSafetyStats,
   tiggo8phevBatterySpecs, tiggo8phevPilotFeatures, tiggo8phevDesignFeatures,
-  tiggo8phevComfortFeatures, tiggo8phevSpecs,
+  tiggo8phevComfortFeatures, tiggo8phevInteriorImages, tiggo8phevExteriorImages,
+  tiggo8phevSpecs,
 } from '@/data/tiggo8phev'
 
 export const metadata: Metadata = {
-  title: 'Chery Tiggo 8 PHEV – True Hybrid Electric | Chery KP',
-  description: "Pakistan's first and best PHEV. 7.1s 0-100, +50km electric range, 16.6kWh battery.",
+  title: 'Chery Tiggo 8 PHEV – Pakistan\'s Only 7-Seater PHEV D-SUV | Chery KP',
+  description: "Pakistan's first and best PHEV. 6.8s 0-100, 90km electric range, 1200km combined range.",
 }
 
 export default function PHEVPage() {
@@ -19,18 +20,18 @@ export default function PHEVPage() {
       <SectionTracker sections={tiggo8phevSections} />
 
       {/* HERO */}
-      <section id="hero" className="relative bg-black overflow-hidden" style={{minHeight:'92vh'}}>
-        <img src="/assets/tiggo8phev/tiggo8-index.png" alt="Chery Tiggo 8 PHEV"
-          className="w-full h-full object-cover absolute inset-0 opacity-80" style={{objectPosition:'50% 60%'}} />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+      <section id="hero" className="relative bg-[#0a1628] overflow-hidden" style={{minHeight:'92vh'}}>
+        <img src="/assets/tiggo8/newtigo8.webp" alt="Chery Tiggo 8 PHEV"
+          className="w-full h-full object-cover absolute inset-0" style={{objectPosition:'60% 50%'}} />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
         <div className="relative z-10 flex gap-3 px-8 md:pl-20 md:pr-16 pt-6">
           <Link href="/test-drive"><button className="h-10 px-5 border border-white/60 rounded-full text-white text-sm hover:bg-white/10 transition">Test Drive</button></Link>
           <Link href="/book-my-chery"><button className="h-10 px-5 bg-white text-black rounded-full text-sm font-medium hover:bg-gray-100 transition">Book Now</button></Link>
         </div>
         <div className="relative z-10 flex flex-col justify-end h-full pb-20 px-8 md:pl-20 md:pr-16" style={{minHeight:'85vh'}}>
-          <p className="text-white/60 text-sm tracking-widest uppercase mb-2">True Hybrid Electric</p>
-          <h1 className="text-5xl md:text-7xl font-light text-white mb-6 leading-tight"><strong className="font-bold">Chery</strong> HS PHEV</h1>
+          <p className="text-white/60 text-sm tracking-widest uppercase mb-2">Pakistan's Only 7-Seater PHEV D-SUV</p>
+          <h1 className="text-5xl md:text-7xl font-light text-white mb-6 leading-tight"><strong className="font-bold">Chery</strong> Tiggo 8 PHEV</h1>
           <div className="flex gap-8 md:gap-16 mb-10">
             {tiggo8phevHeroStats.map((s,i)=>(
               <div key={i} className={i>0?'border-l border-white/20 pl-8 md:pl-16':''}>
@@ -55,10 +56,10 @@ export default function PHEVPage() {
           <ScrollReveal animation="fade-up">
             <span className="text-xs tracking-[0.2em] text-[#ADADAD] font-medium uppercase">Safety</span>
             <h2 className="text-4xl md:text-6xl font-light mt-3 mb-6"><strong className="font-bold">Safe</strong> Travels</h2>
-            <p className="text-base md:text-lg font-light text-gray-600 max-w-2xl text-justify leading-relaxed mb-12">Everyone says safety comes first, we say safety comes foremost. All our innovations lead to the safety and comfort of our drivers and passengers. The Chery Tiggo 8 PHEV inherits the resilient structure of HS, with Chery Driver Assist, 6 airbags and enhanced safety features, ensuring protection and peace of mind wherever you go.</p>
+            <p className="text-base md:text-lg font-light text-gray-600 max-w-2xl text-justify leading-relaxed mb-12">Everyone says safety comes first, we say safety comes foremost. The Chery Tiggo 8 PHEV is built with Chery Driver Assist, 10 airbags and enhanced safety features, ensuring protection and peace of mind wherever you go.</p>
           </ScrollReveal>
           <ScrollReveal animation="scale-up" delay={100}>
-            <img src="/assets/tiggo8phev/tiggo8-index.png" alt="Safety" className="w-full rounded-2xl object-cover h-[300px] md:h-[500px]" />
+            <img src="/assets/tiggo8/airbag.webp" alt="Tiggo 8 Safety" className="w-full rounded-2xl object-cover h-[300px] md:h-[500px]" />
           </ScrollReveal>
           <div className="grid grid-cols-3 gap-6 mt-10 text-center">
             {tiggo8phevSafetyStats.map((s,i)=>(
@@ -79,10 +80,10 @@ export default function PHEVPage() {
           <ScrollReveal animation="fade-up">
             <span className="text-xs tracking-[0.2em] text-[#ADADAD] font-medium uppercase">Performance</span>
             <h2 className="text-4xl md:text-6xl font-light mt-3 mb-6 text-white"><strong className="font-bold">Powerful</strong> Driving Pleasure</h2>
-            <p className="text-base md:text-lg font-light text-white/70 max-w-2xl text-justify leading-relaxed mb-12">Imagine the highest performance blend of the electric motor, turbo engine and precise chassis calibration that makes you smile in the joy of controlling such smooth sheer power.</p>
+            <p className="text-base md:text-lg font-light text-white/70 max-w-2xl text-justify leading-relaxed mb-12">496 hp of combined power, 0-100 in 6.8 seconds. The Tiggo 8 PHEV blends electric motor precision with turbo engine muscle for sheer driving confidence.</p>
           </ScrollReveal>
           <ScrollReveal animation="scale-up" delay={150}>
-            <img src="/assets/tiggo8phev/tiggo8-index.png" alt="Performance" className="w-full rounded-2xl object-cover h-[300px] md:h-[520px]" style={{objectPosition:'50% 60%'}} />
+            <img src="/assets/tiggo8/zero.webp" alt="Tiggo 8 Performance" className="w-full rounded-2xl object-cover h-[300px] md:h-[520px]" style={{objectPosition:'50% 60%'}} />
           </ScrollReveal>
         </div>
       </section>
@@ -93,7 +94,7 @@ export default function PHEVPage() {
           <ScrollReveal animation="fade-right">
             <span className="text-xs tracking-[0.2em] text-[#ADADAD] font-medium uppercase">Plug-in Hybrid</span>
             <h2 className="text-4xl md:text-5xl font-light mt-3 mb-6">Pure Electric.<br />Pure Freedom.</h2>
-            <p className="text-base md:text-lg font-light text-gray-600 text-justify leading-relaxed mb-8">With a 16.6kWh Ternary Lithium Battery, the Chery Tiggo 8 PHEV gives you the freedom to drive on pure electricity for over 50km.</p>
+            <p className="text-base md:text-lg font-light text-gray-600 text-justify leading-relaxed mb-8">With LFP Battery technology, the Chery Tiggo 8 PHEV gives you 90km of pure electric range and 1,200km combined — so you never have to worry about range again.</p>
             <div className="flex flex-col gap-3">
               {tiggo8phevBatterySpecs.map(({key,value})=>(
                 <div key={key} className="flex items-center justify-between border-b border-gray-100 pb-3">
@@ -105,7 +106,7 @@ export default function PHEVPage() {
           </ScrollReveal>
           <ScrollReveal animation="fade-left" delay={150}>
             <div className="bg-[#F7F7F7] rounded-3xl p-8 text-center">
-              <div className="text-8xl font-light text-gray-200 mb-2">+50</div>
+              <div className="text-8xl font-light text-gray-200 mb-2">90</div>
               <p className="text-2xl font-light text-gray-800">km Pure Electric</p>
               <p className="text-sm text-gray-500 mt-2">On a full charge</p>
               <div className="mt-8 w-full bg-gray-200 rounded-full h-3">
@@ -117,29 +118,39 @@ export default function PHEVPage() {
         </div>
       </section>
 
-      {/* Chery PILOT */}
-      <section id="driver-assist" className="py-20 px-8 md:pl-20 md:pr-16 bg-[#F7F7F7]">
+      {/* CHERY DRIVER ASSIST */}
+      <section id="driver-assist" className="py-20 px-8 md:pl-20 md:pr-16 bg-[#181818]">
         <div className="max-w-[1200px] mx-auto">
           <ScrollReveal animation="fade-up">
             <span className="text-xs tracking-[0.2em] text-[#ADADAD] font-medium uppercase">Technology</span>
-            <h2 className="text-4xl md:text-5xl font-light mt-3 mb-6">Chery Driver Assist</h2>
-            <p className="text-base md:text-lg font-light text-gray-600 max-w-2xl text-justify leading-relaxed mb-10">Chery sets the standard for safety with the Chery Driver Assist Safety Suite by ensuring a safe, relaxing, and comfortable driving experience across 11 intelligent systems.</p>
+            <h2 className="text-4xl md:text-5xl font-light mt-3 mb-3 text-white">Chery Driver Assist</h2>
+            <p className="text-base md:text-lg font-light text-white/70 max-w-2xl text-justify leading-relaxed mb-10">An advanced L2 driver-assistance suite covering 11 intelligent safety scenarios — so you can focus on the joy of driving.</p>
           </ScrollReveal>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
             {tiggo8phevPilotFeatures.map((f,i)=>(
               <ScrollReveal key={f.code} animation="fade-up" delay={i*60}>
-                <div className="bg-white rounded-2xl p-4 text-center hover:shadow-md transition-shadow">
-                  <img src={f.img} alt={f.name} className="w-full h-20 object-contain mb-3" />
-                  <p className="text-xs font-bold tracking-widest text-gray-800">{f.code}</p>
-                  <p className="text-[11px] text-gray-500 mt-1 leading-tight">{f.name}</p>
+                <div className="bg-white/5 border border-white/10 rounded-2xl p-5 text-center hover:bg-white/10 transition-colors">
+                  <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mx-auto mb-3">
+                    <span className="text-white text-xs font-bold tracking-wider">{f.code}</span>
+                  </div>
+                  <p className="text-white/90 text-[11px] font-light leading-tight">{f.name}</p>
                 </div>
               </ScrollReveal>
             ))}
           </div>
+          <ScrollReveal animation="fade-up" delay={100}>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              {['Intelligent Speed Limit Assist','Lane Change Assist','Door Opening Warning','Lane Departure Warning'].map(f=>(
+                <div key={f} className="flex items-center gap-2 text-white/50 text-xs">
+                  <span className="w-1 h-1 rounded-full bg-white/30 flex-shrink-0" />{f}
+                </div>
+              ))}
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 
-      {/* DESIGN */}
+      {/* DESIGN / EXTERIOR */}
       <section id="design" className="py-20 px-8 md:pl-20 md:pr-16 bg-white">
         <div className="max-w-[1200px] mx-auto">
           <ScrollReveal animation="fade-up">
@@ -148,11 +159,12 @@ export default function PHEVPage() {
             <p className="text-base md:text-lg font-light text-gray-600 max-w-2xl text-justify leading-relaxed mb-12">The Chery Tiggo 8 PHEV commands attention with its sharp front fascia, sculpted bodywork, and signature Chery Star Matrix grille.</p>
           </ScrollReveal>
           <ScrollReveal animation="scale-up" delay={100}>
-            <div className="grid grid-cols-3 gap-4">
-              <img src="/assets/tiggo8phev/tiggo8-index.png" alt="Front" className="w-full rounded-2xl object-cover h-48 col-span-2" />
-              <img src="/assets/tiggo8phev/tiggo8-index.png" alt="Side" className="w-full rounded-2xl object-cover h-48" />
-              <img src="/assets/tiggo8phev/tiggo8-index.png" alt="Rear" className="w-full rounded-2xl object-cover h-48" />
-              <img src="/assets/Interior1.png" alt="Interior" className="w-full rounded-2xl object-cover h-48 col-span-2" />
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <img src={tiggo8phevExteriorImages[0].src} alt={tiggo8phevExteriorImages[0].alt} className="w-full rounded-2xl object-cover h-48 col-span-2" />
+              <img src={tiggo8phevExteriorImages[1].src} alt={tiggo8phevExteriorImages[1].alt} className="w-full rounded-2xl object-cover h-48" />
+              <img src={tiggo8phevExteriorImages[2].src} alt={tiggo8phevExteriorImages[2].alt} className="w-full rounded-2xl object-cover h-48" />
+              <img src={tiggo8phevExteriorImages[3].src} alt={tiggo8phevExteriorImages[3].alt} className="w-full rounded-2xl object-cover h-48 col-span-2" />
+              <img src="/assets/tiggo8/seater.webp" alt="Tiggo 8 Seating" className="w-full rounded-2xl object-cover h-48 col-span-2" />
             </div>
           </ScrollReveal>
           <div className="grid grid-cols-3 gap-8 mt-12">
@@ -183,9 +195,9 @@ export default function PHEVPage() {
           </ScrollReveal>
           <ScrollReveal animation="fade-left" delay={150}>
             <div className="grid grid-cols-2 gap-3">
-              <img src="/assets/Interior1.png" alt="Interior 1" className="rounded-2xl object-cover h-48 w-full col-span-2" />
-              <img src="/assets/Interior2.png" alt="Interior 2" className="rounded-2xl object-cover h-36 w-full" />
-              <img src="/assets/Interior3.png" alt="Interior 3" className="rounded-2xl object-cover h-36 w-full" />
+              <img src={tiggo8phevInteriorImages[0].src} alt={tiggo8phevInteriorImages[0].alt} className="rounded-2xl object-cover h-48 w-full col-span-2" />
+              <img src={tiggo8phevInteriorImages[1].src} alt={tiggo8phevInteriorImages[1].alt} className="rounded-2xl object-cover h-36 w-full" />
+              <img src={tiggo8phevInteriorImages[2].src} alt={tiggo8phevInteriorImages[2].alt} className="rounded-2xl object-cover h-36 w-full" />
             </div>
           </ScrollReveal>
         </div>

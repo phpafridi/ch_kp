@@ -6,8 +6,8 @@ export default function CheryLogo({ white = false }: { white?: boolean }) {
       <Image
         src="/assets/chery-logo.png"
         alt="Chery KP"
-        width={44}
-        height={44}
+        width={80}
+        height={60}
         className="object-contain"
         priority
       />

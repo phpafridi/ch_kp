@@ -4,32 +4,33 @@ import SectionTracker from '@/components/ui/SectionTracker'
 import ScrollReveal from '@/components/ui/ScrollReveal'
 import {
   tiggo8Sections, tiggo8HeroStats, tiggo8RangeStats,
-  tiggo8BatterySpecs, tiggo8ExteriorFeatures, tiggo8InteriorFeatures, tiggo8Specs,
+  tiggo8BatterySpecs, tiggo8ExteriorFeatures, tiggo8InteriorImages,
+  tiggo8InteriorFeatures, tiggo8Specs,
 } from '@/data/tiggo8'
 
 export const metadata: Metadata = {
-  title: 'Chery Tiggo 8 – Up to 333km Range | Chery KP',
-  description: 'MAGIC Battery Technology, 31.9kWh, up to 333km CLTC range.',
+  title: 'Chery Tiggo 8 – 7-Seater PHEV D-SUV | Chery KP',
+  description: '7 seats, 1200 km combined range, 15.6" screen, L2 Driver Assist. The Chery Tiggo 8 — inquire now.',
 }
 
-export default function Tiggo 8Page() {
+export default function Tiggo8Page() {
   return (
     <div className="bg-white">
       <SectionTracker sections={tiggo8Sections} />
 
       {/* HERO */}
       <section id="hero" className="relative bg-black overflow-hidden" style={{minHeight:'92vh'}}>
-        <img src="/assets/mg-tiggo8/banner/CtymTX.webp" alt="Chery Tiggo 8"
-          className="w-full h-full object-cover absolute inset-0 opacity-85" style={{objectPosition:'50% 50%'}} />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        <img src="/assets/tiggo8/newtigo8.webp" alt="Chery Tiggo 8"
+          className="w-full h-full object-cover absolute inset-0" style={{objectPosition:'60% 50%'}} />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-transparent to-transparent" />
         <div className="relative z-10 flex gap-3 px-8 md:pl-20 md:pr-16 pt-6">
           <Link href="/test-drive"><button className="h-10 px-5 border border-white/60 rounded-full text-white text-sm hover:bg-white/10 transition">Test Drive</button></Link>
           <Link href="/book-my-chery"><button className="h-10 px-5 bg-white text-black rounded-full text-sm font-medium hover:bg-gray-100 transition">Book Now</button></Link>
         </div>
         <div className="relative z-10 flex flex-col justify-end h-full pb-20 px-8 md:pl-20 md:pr-16" style={{minHeight:'85vh'}}>
-          <p className="text-white/60 text-sm tracking-widest uppercase mb-2">Designed to Stand Out</p>
-          <h1 className="text-5xl md:text-7xl font-light text-white mb-6 leading-tight"><strong className="font-bold">Tiggo 8</strong> EV</h1>
+          <p className="text-white/60 text-sm tracking-widest uppercase mb-2">7-Seater PHEV D-SUV</p>
+          <h1 className="text-5xl md:text-7xl font-light text-white mb-6 leading-tight"><strong className="font-bold">Chery</strong> Tiggo 8</h1>
           <div className="flex gap-8 md:gap-16 mb-10">
             {tiggo8HeroStats.map((s,i)=>(
               <div key={i} className={i>0?'border-l border-white/20 pl-8 md:pl-16':''}>
@@ -54,9 +55,9 @@ export default function Tiggo 8Page() {
           <ScrollReveal animation="fade-up">
             <span className="text-xs tracking-[0.2em] text-[#ADADAD] font-medium uppercase">Range</span>
             <h2 className="text-4xl md:text-6xl font-light mt-3 mb-6">Take Charge with<br />the <strong className="font-bold">Chery Tiggo 8</strong></h2>
-            <p className="text-base md:text-lg font-light text-gray-600 max-w-2xl text-justify leading-relaxed mb-12">Chery Tiggo 8 is made for easy city driving. Its compact size, quiet electric motor and comfortable interior make every trip simple and enjoyable.</p>
+            <p className="text-base md:text-lg font-light text-gray-600 max-w-2xl text-justify leading-relaxed mb-12">Pakistan&apos;s most capable 7-seater PHEV. Combining a spacious family SUV with next-generation plug-in hybrid technology for unstoppable range and performance.</p>
           </ScrollReveal>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mb-12">
+          <div className="grid grid-cols-3 gap-6 text-center mb-12">
             {tiggo8RangeStats.map((s,i)=>(
               <ScrollReveal key={s.label} animation="fade-up" delay={i*80}>
                 <div className="border border-gray-100 rounded-2xl py-8">
@@ -67,18 +68,18 @@ export default function Tiggo 8Page() {
             ))}
           </div>
           <ScrollReveal animation="scale-up" delay={100}>
-            <img src="/assets/mg-tiggo8/banner/CtymTX.webp" alt="Chery Tiggo 8" className="w-full rounded-2xl object-cover h-[260px] md:h-[460px]" />
+            <img src="/assets/tiggo8/finalscarsall-1536x563.webp" alt="Chery Tiggo 8 Range" className="w-full rounded-2xl object-cover h-[200px] md:h-[380px]" />
           </ScrollReveal>
         </div>
       </section>
 
-      {/* BATTERY */}
+      {/* SEATING */}
       <section id="battery" className="py-20 px-8 md:pl-20 md:pr-16 bg-[#181818]">
         <div className="max-w-[1200px] mx-auto grid md:grid-cols-2 gap-16 items-center">
           <ScrollReveal animation="fade-right">
-            <span className="text-xs tracking-[0.2em] text-[#ADADAD] font-medium uppercase">Battery</span>
-            <h2 className="text-4xl md:text-5xl font-light mt-3 mb-6 text-white">MAGIC Battery<br />Technology</h2>
-            <p className="text-base md:text-lg font-light text-white/70 text-justify leading-relaxed mb-8">Chery Tiggo 8 is powered by MAGIC Battery technology with a 31.9-kilowatt hour capacity that supports reliable daily use.</p>
+            <span className="text-xs tracking-[0.2em] text-[#ADADAD] font-medium uppercase">Seating</span>
+            <h2 className="text-4xl md:text-5xl font-light mt-3 mb-6 text-white">7-Seat<br />Premium Layout</h2>
+            <p className="text-base md:text-lg font-light text-white/70 text-justify leading-relaxed mb-8">Every journey becomes a shared experience. The Tiggo 8 offers a premium 7-seat configuration with flexible layouts, generous legroom across all three rows, and PHEV technology built for the long haul.</p>
             <div className="space-y-3">
               {tiggo8BatterySpecs.map(({key,value})=>(
                 <div key={key} className="flex justify-between border-b border-white/10 pb-3">
@@ -89,14 +90,7 @@ export default function Tiggo 8Page() {
             </div>
           </ScrollReveal>
           <ScrollReveal animation="fade-left" delay={150}>
-            <div className="flex flex-col items-center justify-center bg-white/5 rounded-3xl p-10 text-center border border-white/10">
-              <div className="text-[96px] font-light text-white leading-none">31.9</div>
-              <p className="text-xl font-light text-white/70 mt-2">kWh MAGIC Battery</p>
-              <p className="text-sm text-white/30 mt-2">Up to 333 km CLTC</p>
-              <div className="mt-8 w-full bg-white/10 rounded-full h-3">
-                <div className="bg-[#29C5E8] h-3 rounded-full" style={{width:'76%'}} />
-              </div>
-            </div>
+            <img src="/assets/tiggo8/7seater.webp" alt="Tiggo 8 7 Seater" className="rounded-2xl object-cover w-full h-[340px]" />
           </ScrollReveal>
         </div>
       </section>
@@ -115,11 +109,15 @@ export default function Tiggo 8Page() {
                   <div className="overflow-hidden rounded-2xl mb-3">
                     <img src={f.img} alt={f.label} className="w-full h-36 object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
-                  <p className="text-sm font-light text-gray-700">{f.label}</p>
+                  <p className="text-sm font-medium text-gray-800">{f.label}</p>
+                  <p className="text-xs text-gray-500 mt-1 font-light">{f.desc}</p>
                 </div>
               </ScrollReveal>
             ))}
           </div>
+          <ScrollReveal animation="scale-up" delay={100}>
+            <img src="/assets/tiggo8/Asset-2.webp" alt="Chery Tiggo 8 Exterior" className="w-full rounded-2xl object-cover h-[280px] md:h-[460px] mt-10" />
+          </ScrollReveal>
         </div>
       </section>
 
@@ -129,7 +127,7 @@ export default function Tiggo 8Page() {
           <ScrollReveal animation="fade-right">
             <span className="text-xs tracking-[0.2em] text-[#ADADAD] font-medium uppercase">Interior</span>
             <h2 className="text-4xl md:text-5xl font-light mt-3 mb-6">Stylish and Modern</h2>
-            <p className="text-base md:text-lg font-light text-gray-600 text-justify leading-relaxed mb-8">The Chery Tiggo 8 cabin is designed with modern sensibilities — fresh colours, clean lines, and smart technology make every journey a pleasure.</p>
+            <p className="text-base md:text-lg font-light text-gray-600 text-justify leading-relaxed mb-8">The Chery Tiggo 8 cabin is designed with modern sensibilities — a 15.6&quot; 2.5K screen, ambient lighting, and smart technology make every journey a pleasure.</p>
             <ul className="space-y-3">
               {tiggo8InteriorFeatures.map(f=>(
                 <li key={f} className="flex items-center gap-3 text-sm text-gray-700">
@@ -140,9 +138,9 @@ export default function Tiggo 8Page() {
           </ScrollReveal>
           <ScrollReveal animation="fade-left" delay={150}>
             <div className="grid grid-cols-2 gap-3">
-              <img src="/assets/Interior1.png" alt="Interior" className="rounded-2xl object-cover h-44 w-full col-span-2" />
-              <img src="/assets/Interior2.png" alt="Interior 2" className="rounded-2xl object-cover h-36 w-full" />
-              <img src="/assets/Interior3.png" alt="Interior 3" className="rounded-2xl object-cover h-36 w-full" />
+              <img src={tiggo8InteriorImages[0].src} alt={tiggo8InteriorImages[0].alt} className="rounded-2xl object-cover h-44 w-full col-span-2" />
+              <img src={tiggo8InteriorImages[1].src} alt={tiggo8InteriorImages[1].alt} className="rounded-2xl object-cover h-36 w-full" />
+              <img src={tiggo8InteriorImages[2].src} alt={tiggo8InteriorImages[2].alt} className="rounded-2xl object-cover h-36 w-full" />
             </div>
           </ScrollReveal>
         </div>
@@ -168,7 +166,7 @@ export default function Tiggo 8Page() {
 
       <section className="bg-black py-16 text-center px-5">
         <ScrollReveal animation="fade-up">
-          <h2 className="text-white text-3xl md:text-5xl font-light mb-3">Your City. Your Electric.</h2>
+          <h2 className="text-white text-3xl md:text-5xl font-light mb-3">Your City. Your Tiggo 8.</h2>
           <div className="flex justify-center gap-4 mt-8">
             <Link href="/book-my-chery"><button className="h-12 px-8 bg-white text-black rounded-full text-sm font-medium hover:bg-gray-100 transition">Book Now</button></Link>
             <Link href="/test-drive"><button className="h-12 px-8 border border-white text-white rounded-full text-sm hover:bg-white/10 transition">Test Drive</button></Link>
