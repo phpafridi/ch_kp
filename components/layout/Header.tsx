@@ -7,11 +7,11 @@ import CheryLogo from '@/components/ui/CheryLogo'
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/model/tiggo8phev', label: 'Tiggo 8 PHEV' },
   { href: '/model/tiggo9', label: 'Tiggo 9 PHEV' },
+  { href: '/model/tiggo8phev', label: 'Tiggo 8 PHEV' },
   { href: '/model/tiggo7', label: 'Tiggo 7 PHEV' },
-  { href: '/about', label: 'About Us' },
   { href: '/contact', label: 'Contact Us' },
+  { href: '/about', label: 'About Chery' },
 ]
 
 export default function Header() {

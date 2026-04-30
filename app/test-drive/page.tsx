@@ -23,31 +23,19 @@ export default function TestDrivePage() {
     setError('')
     setLoading(true)
     try {
-      const formData = new FormData()
-      formData.append('Full Name', form.name)
-      formData.append('Phone', form.phone)
-      formData.append('Email', form.email || 'Not provided')
-      formData.append('Model', form.model)
-      formData.append('City', form.city)
-      formData.append('Preferred Date', form.date || 'Not specified')
-      formData.append('Notes', form.notes || 'None')
-      formData.append('_subject', `Test Drive Request — ${form.model} (${form.city})`)
-      formData.append('_template', 'table')
-      formData.append('_captcha', 'false')
-      formData.append('_autoresponse', 'Thank you for booking a test drive with Chery KP! Our team will contact you shortly to confirm your appointment.')
-
-      const res = await fetch('https://formsubmit.co/073d3d2a810ea9f1c5c415594482bb17', {
+      const res = await fetch('/api/test-drive', {
         method: 'POST',
-        body: formData,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
       })
-      if (res.ok || res.redirected || res.status === 200 || res.status === 302) {
+      const data = await res.json()
+      if (res.ok && data.success) {
         setSubmitted(true)
       } else {
-        setError('Something went wrong. Please call us at 0336-9999884 directly.')
+        setError(data.error || 'Something went wrong. Please call us at 0336-9999884.')
       }
     } catch {
-      // formsubmit may throw on redirect — treat as success
-      setSubmitted(true)
+      setError('Network error. Please call us at 0336-9999884.')
     } finally {
       setLoading(false)
     }

@@ -22,7 +22,7 @@ export default function BookMyMGPage() {
     <div className="bg-white">
       <section className="py-16 px-5 md:px-10 bg-[#F7F7F7]">
         <div className="max-w-[900px] mx-auto text-center">
-          <span className="text-[#ADADAD] text-sm font-medium tracking-widest">RESERVE YOUR MG</span>
+          <span className="text-[#ADADAD] text-sm font-medium tracking-widest">RESERVE YOUR CHERY</span>
           <h1 className="text-4xl md:text-6xl font-light mt-4 mb-4">Book My Chery</h1>
           <p className="text-lg text-gray-500 font-light">Your new Chery awaits. Fill in the form and our team will be in touch.</p>
         </div>
